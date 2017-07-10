@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="6214006F-F355-482c-ADD7-719AAAA2B2C2" Title="iLove SharePoint - PowerWebPart 3.0" 
+         Scope="Site" Version="3.0.0.0" xmlns="http://schemas.microsoft.com/sharepoint/" 
+         AutoActivateInCentralAdmin="TRUE"
+         Hidden="FALSE"
+         ImageUrl="iLoveSharePoint/PowerWebPartFeatureIcon3.jpg"
+         Description="The Most Powerfull Web Part On Earth - Central Admin Feature"
+         ReceiverAssembly="iLoveSharePoint.WebControls.PowerWebPart, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7f77686204a6dd39"
+         ReceiverClass="iLoveSharePoint.WebControls.PowerWebPartFeatureReceiver"
+         >
+  <ElementManifests>
+    <ElementFile Location="Scripts\template.ps1"/>
+    <ElementFile Location="Scripts\templateEditor.ps1"/>
+    <ElementFile Location="Scripts\core.ps1"/>
+    <ElementManifest Location="elements.xml"/>
+  </ElementManifests>
+</Feature>

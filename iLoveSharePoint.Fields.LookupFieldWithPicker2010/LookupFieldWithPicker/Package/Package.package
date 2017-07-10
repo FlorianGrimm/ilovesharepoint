@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9c2fbf0b-b8a3-4340-91ca-b9d120071a4e" solutionId="392617b3-9e5c-469c-8f37-4196ed964384" resetWebServer="false" name="iLoveSharePoint.Fields.LookupFieldWithPicker" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="85361f2d-93b6-48c5-98fb-ad1a76aabd0a" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="863562da-482e-416d-a717-092551d4b491" />
+    <projectItemReference itemId="af615d11-596f-40f4-a1ef-cdda526261fe" />
+    <projectItemReference itemId="1fd92953-bcce-44d9-9dd5-9637af51ac1d" />
+  </projectItems>
+</package>

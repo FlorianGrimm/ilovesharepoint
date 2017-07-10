@@ -1,0 +1,24 @@
+﻿.OPTION EXPLICIT     ; Generate errors 
+.Set CabinetNameTemplate=iLoveSharePoint.PowerWebPart.wsp     
+.set DiskDirectoryTemplate=CDROM ; All cabinets go in a single directory
+.Set CompressionType=MSZIP;** All files are compressed in cabinet files
+.Set UniqueFiles="ON"
+.Set Cabinet=on
+.Set DiskDirectory1=Package
+
+Solution\manifest.xml manifest.xml
+iLoveSharePoint.WebControls.PowerWebPart.dll
+
+.Set DestinationDir="PowerWebPart\"
+12\TEMPLATE\FEATURES\PowerWebPart\elements.xml
+12\TEMPLATE\FEATURES\PowerWebPart\feature.xml
+12\TEMPLATE\FEATURES\PowerWebPart\PowerWebPart.webpart
+12\TEMPLATE\FEATURES\PowerWebPart\PowerWebPartWithExample.webpart
+
+.Set DestinationDir="LAYOUTS\iLoveSharePoint\"
+12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartScriptEditor.aspx
+
+.Set DestinationDir="IMAGES\iLoveSharePoint\"
+12\TEMPLATE\IMAGES\iLoveSharePoint\PowerWebPartIcon.jpg
+12\TEMPLATE\IMAGES\iLoveSharePoint\PowerWebPartFeatureIcon.jpg
+

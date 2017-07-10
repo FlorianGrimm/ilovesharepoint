@@ -1,0 +1,6 @@
+C:\VSProjects\ILoveSharePoint.Sandbox.CreateSiteAction\ILoveSharePoint.Sandbox.CreateSiteAction\bin\Debug\ILoveSharePoint.Sandbox.CreateSiteAction.dll
+C:\VSProjects\ILoveSharePoint.Sandbox.CreateSiteAction\ILoveSharePoint.Sandbox.CreateSiteAction\bin\Debug\ILoveSharePoint.Sandbox.CreateSiteAction.pdb
+C:\VSProjects\ILoveSharePoint.Sandbox.CreateSiteAction\ILoveSharePoint.Sandbox.CreateSiteAction\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+C:\VSProjects\ILoveSharePoint.Sandbox.CreateSiteAction\ILoveSharePoint.Sandbox.CreateSiteAction\obj\Debug\ResolveAssemblyReference.cache
+C:\VSProjects\ILoveSharePoint.Sandbox.CreateSiteAction\ILoveSharePoint.Sandbox.CreateSiteAction\obj\Debug\ILoveSharePoint.Sandbox.CreateSiteAction.dll
+C:\VSProjects\ILoveSharePoint.Sandbox.CreateSiteAction\ILoveSharePoint.Sandbox.CreateSiteAction\obj\Debug\ILoveSharePoint.Sandbox.CreateSiteAction.pdb

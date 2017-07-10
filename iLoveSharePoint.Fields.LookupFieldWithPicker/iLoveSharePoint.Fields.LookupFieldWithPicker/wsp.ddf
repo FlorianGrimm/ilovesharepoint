@@ -1,0 +1,24 @@
+﻿.OPTION EXPLICIT     ; Generate errors 
+.Set CabinetNameTemplate=iLoveSharePoint.Fields.LookupFieldWithPicker.wsp     
+.set DiskDirectoryTemplate=CDROM ; All cabinets go in a single directory
+.Set CompressionType=MSZIP;** All files are compressed in cabinet files
+.Set UniqueFiles="ON"
+.Set Cabinet=on
+.Set DiskDirectory1=Package
+
+manifest.xml
+iLoveSharePoint.Fields.LookupFieldWithPicker.dll
+
+.Set DestinationDir="TEMPLATE\XML\"
+fldtypes_iLoveSharePoint_LookupFieldWithPicker.xml
+
+.Set DestinationDir="TEMPLATE\CONTROLTEMPLATES\"
+LookupWithPicker\LookupFieldWithPickerEditor.ascx
+
+.Set DestinationDir="Resources\"
+Resources\iLoveSharePoint.Fields.LookupFieldWithPicker.resx
+Resources\iLoveSharePoint.Fields.LookupFieldWithPicker.de-de.resx
+
+.Set DestinationDir="CONFIG\Resources\"
+Resources\iLoveSharePoint.Fields.LookupFieldWithPicker.resx
+Resources\iLoveSharePoint.Fields.LookupFieldWithPicker.de-de.resx

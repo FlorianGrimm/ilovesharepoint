@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:SqlActivity_Name"
+       ClassName="ILoveSharePoint.Workflow.Activities.SqlActivity"
+       Assembly="$SharePoint.Project.AssemblyFullName$"
+       AppliesTo="all"
+       UsesCurrentItem="false"
+       Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:SqlActivity_Sentence">
+        <FieldBind Field="ProviderName" Text="$Resources:SqlActivity_ProviderName" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="ConnectionString" Text="$Resources:SqlActivity_ConnectionString" Id="2" DesignerType="TextArea" />
+        <FieldBind Field="Sql" Text="$Resources:SqlActivity_Sql" Id="3" DesignerType="StringBuilder" />
+        <FieldBind Field="Result,ResultType" Text="$Resources:SqlActivity_Result" Id="4" DesignerType="ParameterNames" />
+        <FieldBind Field="SecureStoreAppId" Text="$Resources:WebServiceActivity_AppId" Id="5" DesignerType="TextBox" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ProviderName" Type="System.String, mscorlib" Direction="In" InitialValue="System.Data.SqlClient"/>
+        <Parameter Name="ConnectionString" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Sql" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="SecureStoreAppId" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Result"  Type="System.Object, mscorlib" Direction="Out" />
+        <Parameter Name="ResultType" Type="System.String, mscorlib" Direction="Out" />
+      </Parameters>
+    </Action>
+  </WorkflowActions>
+</Elements>

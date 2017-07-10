@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution SolutionId="3e183884-6cfd-4261-8238-f074cab349c6" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <FeatureManifests>
+    <FeatureManifest Location="ListWithoutTitle\feature.xml" />
+  </FeatureManifests>
+  <Assemblies>
+    <Assembly Location="iLoveSharePoint.Lists.ListWithoutTitle.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <RootFiles>
+    <RootFile Location="Resources/iLoveSharePoint.Lists.ListWithoutTitle.resx"/>
+    <RootFile Location="Resources/iLoveSharePoint.Lists.ListWithoutTitle.de-de.resx"/>
+  </RootFiles>
+</Solution>

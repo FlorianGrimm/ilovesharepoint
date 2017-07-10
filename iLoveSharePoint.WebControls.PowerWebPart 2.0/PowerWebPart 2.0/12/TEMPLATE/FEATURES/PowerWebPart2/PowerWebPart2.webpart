@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<type name="iLoveSharePoint.WebControls.PowerWebPart, iLoveSharePoint.WebControls.PowerWebPart, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7f77686204a6dd39" />
+			<importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">PowerWebPart 2.0</property>
+			  <property name="Description" type="string">iLove SharePoint PowerShell WebPart</property>
+        <property name="CatalogIconImageUrl" type="string" >/_layouts/images/iLoveSharePoint/PowerWebPartIcon2.jpg</property>
+        <property name="Script" type="string">
+function Render($writer)
+{
+  $writer.Write("&lt;a href='http://www.iLoveSharePoint.com'&gt;iLove SharePoint&lt;/a&gt;")
+}
+
+        </property>
+        <property name="PredefinedFunctions" type="string">
+$ErrorActionPreference = "Stop"
+$progressTemplate="&lt;div style='position:absolute;z-index:9;filter:alpha(opacity=70);background-color:#FFFFFF;width:expression(this.parentNode.parentNode.offsetWidth);height:expression(this.parentNode.parentNode.offsetHeight)'&gt;&lt;/div&gt; &lt;div style='position:absolute;z-index:10;background-image:url(/_layouts/images/GEARS_AN.GIF); background-repeat:no-repeat;background-position:center;width:100%;height:expression(parentNode.parentNode.offsetHeight)'&gt;&lt;/div&gt;"
+
+# returns the SPSite at the specified URL
+function global:Get-SPSite ([String]$webUrl=$(throw 'Parameter -webUrl is missing!'))
+{
+  return New-Object -TypeName "Microsoft.SharePoint.SPSite" -ArgumentList "$webUrl";
+}
+
+# returns the SPWeb object from the specified URL
+function global:Get-SPWeb ([String]$webUrl=$(throw 'Parameter -webUrl is missing!'))
+{
+  $site =  New-Object -TypeName "Microsoft.SharePoint.SPSite" -ArgumentList "$webUrl";
+  return $site.OpenWeb();
+}
+
+# returns the SPList object from the specified URL and List name
+function global:Get-SPList ([String]$webUrl=$(throw 'Parameter -webUrl is missing!'),
+[String]$listName=$(throw 'Parameter -listName is missing!'))
+{
+  $site =  New-Object -TypeName "Microsoft.SharePoint.SPSite" -ArgumentList "$webUrl";
+  $web = $site.OpenWeb();
+  return $web.Lists[$listName]
+}
+
+# returns a PSObject from a SPListItem with the provided columns as properties (e.g. $customerList.Items | Select-SPListItem Name,Country | Group-Object Country)
+function global:Select-SPListItem($columns=$(throw 'Parameter -columns is missing!'))
+{
+  process
+  {
+    if($_ -eq $null)
+    {
+      return $null
+    }
+
+    if($_ -isnot [Microsoft.SharePoint.SPListItem])
+    {
+      throw "Object is not a SPListItem!"
+    }
+
+    $select = $null
+    foreach($col in $columns)
+    {
+      if($_.Fields.ContainsField($col) -eq $true)
+      {
+        if($select -ne $null)
+        {
+        $select+=','
+        }
+        else
+        {
+          $select = "`$_ | Select-Object "
+        }
+
+        $select += "@{Name='$col';Expression={`$_.Item('$col')}}"
+      }
+    }
+    Invoke-Expression -Command $select
+  }
+}
+
+
+        </property>
+      </properties>
+		</data>
+	</webPart>
+</webParts>

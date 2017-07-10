@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="39d95625-48dd-4a8c-9cf2-cd027677edc7" Title="$Resources:iLoveSharePoint.Lists.ListWithoutTitle,ListWithoutTitleFeatureName" Scope="Web" Version="1.0.0.0" Hidden="FALSE" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="ListDefinition.xml" />
+    <ElementFile Location="ListWithoutTitle\schema.xml" />
+    <ElementFile Location="ListWithoutTitle\AllItems.aspx" />
+    <ElementFile Location="ListWithoutTitle\DispForm.aspx" />
+    <ElementFile Location="ListWithoutTitle\EditForm.aspx" />
+    <ElementFile Location="ListWithoutTitle\NewForm.aspx" />
+  </ElementManifests>
+</Feature>

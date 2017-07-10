@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BuildStringActivity_DynamicString" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="BuildStringActivity_Name" xml:space="preserve">
+    <value>Dynamische Zeichenkette</value>
+  </data>
+  <data name="BuildStringActivity_Result" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="BuildStringActivity_Sentence" xml:space="preserve">
+    <value>%1 (Output: %2).</value>
+  </data>
+  <data name="CreateSiteActivity_Description" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="CreateSiteActivity_Error" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="CreateSiteActivity_InheritPermissions" xml:space="preserve">
+    <value>Berechtigungen vererben</value>
+  </data>
+  <data name="CreateSiteActivity_InheritTopLinkBar" xml:space="preserve">
+    <value>Top-Navigation vererben</value>
+  </data>
+  <data name="CreateSiteActivity_Language" xml:space="preserve">
+    <value>Sprachcode</value>
+  </data>
+  <data name="CreateSiteActivity_Name" xml:space="preserve">
+    <value>Neue Website erstellen</value>
+  </data>
+  <data name="CreateSiteActivity_Result" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="CreateSiteActivity_Sentence" xml:space="preserve">
+    <value>Erstelle neue Website mit %1, %2, %3, %4, Sprachcode: %7 (0=Sprache vererben), Berechtigungen vererben: %5 und Top-Navigation vererben: %8 (Ausgabe: %6; Fehler: %9).</value>
+  </data>
+  <data name="CreateSiteActivity_Template" xml:space="preserve">
+    <value>Vorlage</value>
+  </data>
+  <data name="CreateSiteActivity_Title" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="CreateSiteActivity_Url" xml:space="preserve">
+    <value>URL der Website</value>
+  </data>
+  <data name="CreateXmlFileActivity_FileItemId" xml:space="preserve">
+    <value>Listeintrags ID</value>
+  </data>
+  <data name="CreateXmlFileActivity_FileName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CreateXmlFileActivity_ListId" xml:space="preserve">
+    <value>Liste</value>
+  </data>
+  <data name="CreateXmlFileActivity_Name" xml:space="preserve">
+    <value>XML-Dokument erstellen</value>
+  </data>
+  <data name="CreateXmlFileActivity_Overwrite" xml:space="preserve">
+    <value>überschreiben</value>
+  </data>
+  <data name="CreateXmlFileActivity_Result" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="CreateXmlFileActivity_Sentence" xml:space="preserve">
+    <value>XML-Dokument in Liste %1 mit Namen %2 und XML %3 erstellen. Vorhandene Datei überschreiben: %4. Listeintrags ID speichern in %5.</value>
+  </data>
+  <data name="CreateXmlFileActivity_Xml" xml:space="preserve">
+    <value>XML</value>
+  </data>
+  <data name="FeatureDescription" xml:space="preserve">
+    <value>Enthält erweiterte SharePoint Designer 2010 Workflow Aktivitäten.</value>
+  </data>
+  <data name="FeatureTitle" xml:space="preserve">
+    <value>iLove SharePoint - SharePoint Designer 2010 Workflow Aktivitäten</value>
+  </data>
+  <data name="GetParentFolderActivity_FolderItemId" xml:space="preserve">
+    <value>Ordner-ID</value>
+  </data>
+  <data name="GetParentFolderActivity_ListItem" xml:space="preserve">
+    <value>Listeintrag</value>
+  </data>
+  <data name="GetParentFolderActivity_Name" xml:space="preserve">
+    <value>Finde übergeordente Ordner</value>
+  </data>
+  <data name="GetParentFolderActivity_Sentence" xml:space="preserve">
+    <value>Finde den übergeordente Ordner von %1 (Ausgabe: %2).</value>
+  </data>
+  <data name="HttpRequestActivity_Address" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="HttpRequestActivity_AppId" xml:space="preserve">
+    <value>AppId</value>
+  </data>
+  <data name="HttpRequestActivity_Body" xml:space="preserve">
+    <value>Body</value>
+  </data>
+  <data name="HttpRequestActivity_Header" xml:space="preserve">
+    <value>Header</value>
+  </data>
+  <data name="HttpRequestActivity_Method" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="HttpRequestActivity_Name" xml:space="preserve">
+    <value>HTTP-Request</value>
+  </data>
+  <data name="HttpRequestActivity_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="HttpRequestActivity_Response" xml:space="preserve">
+    <value>Response</value>
+  </data>
+  <data name="HttpRequestActivity_Sentence" xml:space="preserve">
+    <value>HTTP-Request Address: %1; Method: %2; Header: %3; Body: %4; User: %6 and Password: %7 or Secure Store AppId: %8 (Ausgabe: %5).</value>
+  </data>
+  <data name="HttpRequestActivity_User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="QueryXmlActivity_Name" xml:space="preserve">
+    <value>XML abfragen</value>
+  </data>
+  <data name="QueryXmlActivity_Result" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="QueryXmlActivity_SelectionType" xml:space="preserve">
+    <value>Selektionstyp</value>
+  </data>
+  <data name="QueryXmlActivity_Sentence" xml:space="preserve">
+    <value>XML %1 mit %2 Ausdruck %2 abragen und %3 selektieren (Ausgabe:  %4)</value>
+  </data>
+  <data name="QueryXmlActivity_Xml" xml:space="preserve">
+    <value>XML</value>
+  </data>
+  <data name="QueryXmlActivity_XPath" xml:space="preserve">
+    <value>XPath</value>
+  </data>
+  <data name="QueryXmlFileActivity_ListItem" xml:space="preserve">
+    <value>Listeintrag</value>
+  </data>
+  <data name="QueryXmlFileActivity_Name" xml:space="preserve">
+    <value>XML-Dokument Abfragen</value>
+  </data>
+  <data name="QueryXmlFileActivity_Result" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="QueryXmlFileActivity_SelectionType" xml:space="preserve">
+    <value>Selektionstyp</value>
+  </data>
+  <data name="QueryXmlFileActivity_Sentence" xml:space="preserve">
+    <value>XML-Dokument %1 mit %2 abfragen und %3 selektieren (Ausgabe: %4).</value>
+  </data>
+  <data name="QueryXmlFileActivity_XPath" xml:space="preserve">
+    <value>XPath</value>
+  </data>
+  <data name="RegexActivity_Input" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="RegexActivity_Name" xml:space="preserve">
+    <value>Extrahiere Zeichenkette mit regulärem Ausdruck</value>
+  </data>
+  <data name="RegexActivity_Regex" xml:space="preserve">
+    <value>Regex</value>
+  </data>
+  <data name="RegexActivity_Result" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="RegexActivity_Sentence" xml:space="preserve">
+    <value>Führe %1 auf %2 aus (Ausgabe: %3).</value>
+  </data>
+  <data name="RegexReplaceActivity_Input" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="RegexReplaceActivity_Name" xml:space="preserve">
+    <value>Ersetze Zeichenkette mit regulärem Ausdruck</value>
+  </data>
+  <data name="RegexReplaceActivity_Regex" xml:space="preserve">
+    <value>Regex</value>
+  </data>
+  <data name="RegexReplaceActivity_Replace" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="RegexReplaceActivity_Result" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="RegexReplaceActivity_Sentence" xml:space="preserve">
+    <value>Führe %1 auf %2 aus und ersetze Treffer mit %3 (Ausgabe: %4).</value>
+  </data>
+  <data name="SetXmlActivity_Name" xml:space="preserve">
+    <value>XML setzen</value>
+  </data>
+  <data name="SetXmlActivity_Result" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="SetXmlActivity_SelectionType" xml:space="preserve">
+    <value>Selektionstyp</value>
+  </data>
+  <data name="SetXmlActivity_Sentence" xml:space="preserve">
+    <value>Frage %1 mit %2 ab und  setze %3 zu %4 (Ausgabe: %5).</value>
+  </data>
+  <data name="SetXmlActivity_Value" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="SetXmlActivity_Xml" xml:space="preserve">
+    <value>XML-Text</value>
+  </data>
+  <data name="SetXmlActivity_XPath" xml:space="preserve">
+    <value>XPath</value>
+  </data>
+  <data name="SqlActivity_AppId" xml:space="preserve">
+    <value>AppId</value>
+  </data>
+  <data name="SqlActivity_ConnectionString" xml:space="preserve">
+    <value>Verbindungszeichenfolge</value>
+  </data>
+  <data name="SqlActivity_Name" xml:space="preserve">
+    <value>SQL-Abfrage ausführen</value>
+  </data>
+  <data name="SqlActivity_ProviderName" xml:space="preserve">
+    <value>Provider</value>
+  </data>
+  <data name="SqlActivity_Result" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="SqlActivity_Sentence" xml:space="preserve">
+    <value>Führe %3 aus. Benutze %1 und %2. Optional: User ID und Passwort aus Secure Store %5 hinzufügen (Ausgabe: %4).</value>
+  </data>
+  <data name="SqlActivity_Sql" xml:space="preserve">
+    <value>SQL</value>
+  </data>
+  <data name="UpdateXmlFileActivity_ListItem" xml:space="preserve">
+    <value>Listeneintrag</value>
+  </data>
+  <data name="UpdateXmlFileActivity_Name" xml:space="preserve">
+    <value>XML-Dokument aktualisieren</value>
+  </data>
+  <data name="UpdateXmlFileActivity_Sentence" xml:space="preserve">
+    <value>XML-Dokument %1 mit %2 aktualisieren.</value>
+  </data>
+  <data name="UpdateXmlFileActivity_Xml" xml:space="preserve">
+    <value>XML</value>
+  </data>
+  <data name="WaitForExternalEventActivity_CorrelationIdentifier" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="WaitForExternalEventActivity_ExternalData" xml:space="preserve">
+    <value>Daten</value>
+  </data>
+  <data name="WaitForExternalEventActivity_Name" xml:space="preserve">
+    <value>Warte auf extene Daten</value>
+  </data>
+  <data name="WaitForExternalEventActivity_Sentence" xml:space="preserve">
+    <value>Warte auf extene Daten (Ergebnis: %1; Correlation Id: %2).</value>
+  </data>
+  <data name="WebServiceActivity_Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="WebServiceActivity_Address" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="WebServiceActivity_AppId" xml:space="preserve">
+    <value>AppId</value>
+  </data>
+  <data name="WebServiceActivity_Envelope" xml:space="preserve">
+    <value>SOAP Request Envelope</value>
+  </data>
+  <data name="WebServiceActivity_Name" xml:space="preserve">
+    <value>Webservice aufrufen</value>
+  </data>
+  <data name="WebServiceActivity_Password" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="WebServiceActivity_Response" xml:space="preserve">
+    <value>Antwort</value>
+  </data>
+  <data name="WebServiceActivity_Sentence" xml:space="preserve">
+    <value>Webservice URL: %1; SOAP Version %2; SOAP Action %3; SOAP Envelope %4;  Benutzer: %6 und Passwort %7 oder Secure Store AppId: %8 (Ausgabe: %5).</value>
+  </data>
+  <data name="WebServiceActivity_SoapVersion" xml:space="preserve">
+    <value>SOAP Version</value>
+  </data>
+  <data name="WebServiceActivity_User" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+  <data name="PowerActivity_AppId" xml:space="preserve">
+    <value>AppId</value>
+  </data>
+  <data name="PowerActivity_Name" xml:space="preserve">
+    <value>PowerShell Skript ausführen</value>
+  </data>
+  <data name="PowerActivity_Param1" xml:space="preserve">
+    <value>var1</value>
+  </data>
+  <data name="PowerActivity_Param2" xml:space="preserve">
+    <value>var2</value>
+  </data>
+  <data name="PowerActivity_Param3" xml:space="preserve">
+    <value>var3</value>
+  </data>
+  <data name="PowerActivity_Param4" xml:space="preserve">
+    <value>var4</value>
+  </data>
+  <data name="PowerActivity_Param5" xml:space="preserve">
+    <value>var5</value>
+  </data>
+  <data name="PowerActivity_Script" xml:space="preserve">
+    <value>Skript</value>
+  </data>
+  <data name="PowerActivity_Secure" xml:space="preserve">
+    <value>secure string</value>
+  </data>
+  <data name="PowerActivity_Sentence" xml:space="preserve">
+    <value>PowerShell %1 ausführen (Signature %2; $var1: %3; $var2: %4; $var3: %5; $var4: %6; $var5: %7; $secure: %8; Secure Store AppId: %9 ).</value>
+  </data>
+  <data name="PowerActivity_Signature" xml:space="preserve">
+    <value>Signature</value>
+  </data>
+</root>

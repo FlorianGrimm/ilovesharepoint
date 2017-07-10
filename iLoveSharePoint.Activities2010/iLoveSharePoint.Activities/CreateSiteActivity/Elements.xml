@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:CreateSiteActivity_Name"
+     ClassName="ILoveSharePoint.Workflow.Activities.CreateSiteActivity"
+     Assembly="$SharePoint.Project.AssemblyFullName$"
+     AppliesTo="all"
+     UsesCurrentItem="false"
+     Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:CreateSiteActivity_Sentence">
+        <FieldBind Field="Url" Text="$Resources:CreateSiteActivity_Url" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="Title" Text="$Resources:CreateSiteActivity_Title" Id="2" DesignerType="TextArea" />
+        <FieldBind Field="SiteDescription" Text="$Resources:CreateSiteActivity_Description" Id="3" DesignerType="TextArea" />
+        <FieldBind Field="Template" Text="$Resources:CreateSiteActivity_Template" Id="4" DesignerType="TextArea" />
+        <FieldBind Field="InheritPermissions" Text="$Resources:CreateSiteActivity_InheritPermissions" Id="5" DesignerType="Bool" />
+        <FieldBind Field="Result" Text="$Resources:CreateSiteActivity_Result" Id="6" DesignerType="ParameterNames" />
+        <FieldBind Field="Language" Text="$Resources:CreateSiteActivity_LanguageCode" Id="7" DesignerType="Integer" />
+        <FieldBind Field="InheritTopLinkBar" Text="$Resources:CreateSiteActivity_InheritTopLinkBar" Id="8" DesignerType="Bool" />
+        <FieldBind Field="Error" Text="$Resources:CreateSiteActivity_Error" Id="9" DesignerType="ParameterNames" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="Url" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Title" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Description" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Template" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="InheritPermissions" Type="System.Boolean, mscorlib" Direction="In" />
+        <Parameter Name="Result"  Type="System.String, mscorlib" Direction="Optional" DesignerType="ParameterNames" />
+        <Parameter Name="Language" Type="System.Int32, mscorlib" Direction="Optional" />
+        <Parameter Name="InheritTopLinkBar" Type="System.Boolean, mscorlib" Direction="In" InitialValue="false" />
+        <Parameter Name="Error"  Type="System.String, mscorlib" Direction="Optional" DesignerType="ParameterNames" />
+      </Parameters>
+    </Action>
+    
+  </WorkflowActions>
+</Elements>

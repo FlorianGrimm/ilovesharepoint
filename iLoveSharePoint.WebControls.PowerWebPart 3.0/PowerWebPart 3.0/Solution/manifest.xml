@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Solution SolutionId="D3D264AC-DFA3-4140-8DA7-C7B33393526F"  xmlns="http://schemas.microsoft.com/sharepoint/">
+  <FeatureManifests>
+    <FeatureManifest Location="PowerWebPart3\feature.xml" />
+    <FeatureManifest Location="PowerWebPart3CentralAdmin\feature.xml"/>
+  </FeatureManifests>
+  <TemplateFiles>
+    <TemplateFile Location="LAYOUTS\iLoveSharePoint\PowerWebPartScriptEditor3.aspx"/>
+    <TemplateFile Location="LAYOUTS\iLoveSharePoint\PowerWebPartSimpleTextEditor3.aspx"/>
+    <TemplateFile Location="LAYOUTS\iLoveSharePoint\PowerWebPartConfig3.aspx"/>
+    <TemplateFile Location="LAYOUTS\iLoveSharePoint\jquery-1.3.2.min.js"/>
+    <TemplateFile Location="LAYOUTS\iLoveSharePoint\PowerWebPartEditor3.js"/>
+    <TemplateFile Location="LAYOUTS\iLoveSharePoint\PowerWebPartDebugPing.aspx"/>
+    <TemplateFile Location="IMAGES\iLoveSharePoint\PowerWebPartFeatureIcon3.jpg"/>
+    <TemplateFile Location="IMAGES\iLoveSharePoint\PowerWebPartIcon3.gif"/>
+    <TemplateFile Location="IMAGES\iLoveSharePoint\PowerWebPartPowerGuiIcon3.gif"/>
+  </TemplateFiles>
+  <Assemblies>
+    <Assembly DeploymentTarget="GlobalAssemblyCache" Location="iLoveSharePoint.WebControls.PowerWebPart.dll">
+      <SafeControls>
+        <SafeControl Assembly="iLoveSharePoint.WebControls.PowerWebPart, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7f77686204a6dd39" Namespace="iLoveSharePoint.WebControls" TypeName="*" Safe="True" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+</Solution>

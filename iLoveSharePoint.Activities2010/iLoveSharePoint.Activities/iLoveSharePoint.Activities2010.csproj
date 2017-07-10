@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C027A92-4252-4D62-86B4-27796078C573}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ILoveSharePoint.Workflow.Activities</RootNamespace>
+    <AssemblyName>ILoveSharePoint.Workflow.Activities</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <TokenReplacementFileExtensions>xml;svc</TokenReplacementFileExtensions>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.BusinessData, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.SecureStoreService, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="microsoft.sharepoint.WorkflowActions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\microsoft.sharepoint.WorkflowActions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildStringActivity\BuildStringActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FieldId.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="CreateSiteActivity\CreateSiteActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CreateXmlFileActivity\CreateXmlFileActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Features\ILSPSPDActionsWebApp\ILSPSPDActionsWebApp.EventReceiver.cs">
+      <DependentUpon>ILSPSPDActionsWebApp.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ILSPSPDActions\ILSPSPDActions.EventReceiver.cs">
+      <DependentUpon>ILSPSPDActions.feature</DependentUpon>
+    </Compile>
+    <Compile Include="GetParentFolderActivity\GetParentFolderActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="HttpRequestActivity\HttpRequestActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ISAPI\IWorkflowExternalDataExchange.cs" />
+    <Compile Include="ISAPI\WorkflowExternalDataExchange.cs" />
+    <Compile Include="Layouts\ILSPSPDActions\SendDataToWorkflow.aspx.cs">
+      <DependentUpon>SendDataToWorkflow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\ILSPSPDActions\SendDataToWorkflow.aspx.designer.cs">
+      <DependentUpon>SendDataToWorkflow.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PowerActivity\PowerActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryXmlFileActivity\QueryXmlFileActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QueryXmlActivity\QueryXmlActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <None Include="BuildStringActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e0381f8d-2da9-4d52-b676-9e87cc16c74e}</SharePointProjectItemId>
+    </None>
+    <None Include="CreateXmlFileActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3dda895b-0010-4fc1-aba8-42e3271fd68b}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\ILSPSPDActionsHidden\ILSPSPDActionsHidden.feature">
+      <FeatureId>{eebe3786-4c08-4b9e-a2fe-298a988effca}</FeatureId>
+    </None>
+    <None Include="Features\ILSPSPDActionsWebApp\ILSPSPDActionsWebApp.feature">
+      <FeatureId>{03117205-42ed-487d-aa79-85ae784bd5f6}</FeatureId>
+    </None>
+    <None Include="GetParentFolderActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{95a3090a-194a-4747-8a74-d31f24f615f8}</SharePointProjectItemId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{eed68e64-93ed-4960-8712-81c379b2693a}</SharePointProjectItemId>
+    </None>
+    <None Include="ISAPI\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5199e59e-f4b6-4089-80e8-e103eab9df34}</SharePointProjectItemId>
+    </None>
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f779ebfa-69d9-4d8f-a8f1-685a57e04a96}</SharePointProjectItemId>
+    </None>
+    <None Include="PowerActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5d5dbd4a-5815-4893-b70a-e303bdc196ad}</SharePointProjectItemId>
+    </None>
+    <None Include="QueryXmlFileActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{18057324-1c90-4301-97e9-bcf716f1ee26}</SharePointProjectItemId>
+    </None>
+    <None Include="RegexActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cd829bd4-7624-43f8-bec8-f402802d3779}</SharePointProjectItemId>
+    </None>
+    <None Include="RegexReplaceActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ee34335b-071a-4370-b1a1-226711079732}</SharePointProjectItemId>
+    </None>
+    <Content Include="PowerActivity\Elements.xml" />
+    <Content Include="Scripts\Encrypt-Password.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="RegexActivity\RegexActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RegexReplaceActivity\RegexReplaceActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="Scripts\Send-DataToWorkflow.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="SetXmlActivity\SetXmlActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SqlActivity\SqlActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UpdateXmlFileActivity\UpdateXmlFileActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WaitForExternalEventActivity\ExternalEventArgs.cs" />
+    <Compile Include="WaitForExternalEventActivity\IWaitForExternalEventService.cs" />
+    <Compile Include="WaitForExternalEventActivity\WaitForExternalEventActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WaitForExternalEventActivity\WaitForExternalEventService.cs" />
+    <Compile Include="WebServiceActivity\WebServiceActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CreateSiteActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c2e31d1f-b34e-4e03-aef7-ff070549d48b}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\ILSPSPDActions\ILSPSPDActions.feature">
+      <FeatureId>{33e09fac-cc9b-4d79-b703-3285e1423ba3}</FeatureId>
+    </None>
+    <None Include="HttpRequestActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2c6e51f0-51b4-4da8-9db6-88e5633152a3}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{dba06714-bc56-4049-9264-7f04a4cf9853}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="QueryXmlActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ee2e2834-5afe-4457-8021-e3e280af2c87}</SharePointProjectItemId>
+    </None>
+    <Content Include="Scripts\Export-Key.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Import-Key.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Set-PowerActivityScriptSigning.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Sign-PowerActivityScript.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="SetXmlActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{607fc68d-ef49-4d02-9eca-23f1751e4a15}</SharePointProjectItemId>
+    </None>
+    <None Include="SqlActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{da07b653-0c04-4f8b-bccb-5b0599b5063b}</SharePointProjectItemId>
+    </None>
+    <None Include="UpdateXmlFileActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c208df5c-6871-4513-a9a8-8a36f4e2ddd1}</SharePointProjectItemId>
+    </None>
+    <None Include="WaitForExternalEventActions\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8389b420-9642-4fef-83ba-63d0d970fe92}</SharePointProjectItemId>
+    </None>
+    <None Include="WaitForExternalEventActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2d734d2a-43bf-4785-ad2f-e7822f20c4bf}</SharePointProjectItemId>
+    </None>
+    <None Include="WaitForExternalEventCT\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{32fc8316-1120-4a85-94bd-c53f41e5eb8a}</SharePointProjectItemId>
+    </None>
+    <None Include="WaitForExternalEventList\ListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{db9719e6-696a-43b3-90e0-4a2d5bc8beb8}</SharePointProjectItemId>
+    </None>
+    <None Include="WaitForExternalEventList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a6176eff-218a-44ea-89a6-71407874b0a6}</SharePointProjectItemId>
+    </None>
+    <None Include="WebServiceActivity\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1c0841bb-95a4-41fd-8469-15a628655468}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BuildStringActivity\Elements.xml" />
+    <Content Include="CreateSiteActivity\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CreateXmlFileActivity\Elements.xml" />
+    <Content Include="Features\ILSPSPDActionsHidden\ILSPSPDActionsHidden.Template.xml">
+      <DependentUpon>ILSPSPDActionsHidden.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ILSPSPDActionsWebApp\ILSPSPDActionsWebApp.Template.xml">
+      <DependentUpon>ILSPSPDActionsWebApp.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\ILSPSPDActions\ILSPSPDActions.Template.xml">
+      <DependentUpon>ILSPSPDActions.feature</DependentUpon>
+    </Content>
+    <Content Include="GetParentFolderActivity\Elements.xml" />
+    <Content Include="HttpRequestActivity\Elements.xml" />
+    <Content Include="Images\ILSPSPDActions\FeatureIcon.gif" />
+    <Content Include="ISAPI\ILSPSPDActions_WorkflowExternalDataExchangeJson.svc" />
+    <Content Include="ISAPI\ILSPSPDActions_WorkflowExternalDataExchange.svc" />
+    <Content Include="Layouts\ILSPSPDActions\SendDataToWorkflow.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="QueryXmlActivity\Elements.xml" />
+    <Content Include="QueryXmlFileActivity\Elements.xml" />
+    <Content Include="RegexActivity\Elements.xml" />
+    <Content Include="RegexReplaceActivity\Elements.xml" />
+    <Content Include="SetXmlActivity\Elements.xml" />
+    <Content Include="SqlActivity\Elements.xml" />
+    <Content Include="UpdateXmlFileActivity\Elements.xml" />
+    <Content Include="WaitForExternalEventActions\Elements.xml" />
+    <Content Include="WaitForExternalEventActivity\Elements.xml" />
+    <Content Include="WaitForExternalEventCT\Elements.xml" />
+    <Content Include="WaitForExternalEventList\Elements.xml" />
+    <Content Include="WaitForExternalEventList\ListInstance\Elements.xml" />
+    <Content Include="WaitForExternalEventList\Schema.xml" />
+    <Content Include="WebServiceActivity\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\ILSPSPDActions\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\ILSPSPDActionsHidden\Resources.resx" />
+    <Content Include="Features\ILSPSPDActionsHidden\Resources.de.resx" />
+    <Content Include="Features\ILSPSPDActions\Resources.de.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ISAPI\ILSPSPDActions\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="5DA9A6DE-992B-440f-8335-57E255CDF8E7" Title="iLove SharePoint - PowerEventReceivers" 
+         Scope="Web" Version="1.0.0.0" Hidden="FALSE" xmlns="http://schemas.microsoft.com/sharepoint/" 
+         ImageUrl="iLoveSharePoint/PowerEventReceiversFeatureIcon.jpg"
+         Description="The Most Powerfull Event Receivers On Earth"
+         >
+  <ElementManifests>
+    <ElementManifest Location="elements.xml" />
+  </ElementManifests>
+</Feature>

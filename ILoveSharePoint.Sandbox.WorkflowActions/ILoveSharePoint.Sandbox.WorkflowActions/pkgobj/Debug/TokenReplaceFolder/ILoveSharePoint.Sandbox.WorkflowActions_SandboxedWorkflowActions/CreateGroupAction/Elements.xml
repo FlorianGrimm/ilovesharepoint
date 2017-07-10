@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<WorkflowActions>
+		<Action Name="Create a group"
+				SandboxedFunction="true"
+				Assembly="ILoveSharePoint.Sandbox.WorkflowActions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1cee825dae0994"
+				ClassName="ILoveSharePoint.Sandbox.WorkflowActions.CreateGroupAction"
+				FunctionName="CreateGroup"
+				AppliesTo="all"		
+				RequiredInvocationTags="ImpersonationSequence"
+				UsesCurrentItem="false"
+				Category="iLove SharePoint">
+			<RuleDesigner Sentence="Create group %1 (Site: %2, Owner: %3, Description: %4, Permissions: %5, Error: %6).">
+				<FieldBind Field="groupName" Text="groupName" Id="1" DesignerType="TextBox" />
+				<FieldBind Field="siteUrl" Text="siteUrl" Id="2" DesignerType="TextBox" Value="" />
+				<FieldBind Field="owner" Text="owner" Id="3" DesignerType="SinglePerson" />
+				<FieldBind Field="description" Text="description" Id="4" DesignerType="TextArea" Value="" />
+				<FieldBind Field="permissions" Text="permissions" Id="5" DesignerType="TextArea" />
+				<FieldBind Field="error" Text="error" Id="6" DesignerType="ParameterNames" />
+			</RuleDesigner>
+			<Parameters>
+				<Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext, Microsoft.SharePoint.WorkflowActions" Direction="In" DesignerType="Hide" />
+				<Parameter Name="groupName" Type="System.String, mscorlib" Direction="In" DesignerType="TextBox"  />
+				<Parameter Name="siteUrl" Type="System.String, mscorlib" Direction="Optional" DesignerType="TextBox" InitialValue="" />
+				<Parameter Name="owner" Type="System.String, mscorlib" Direction="In" DesignerType="SinglePerson"  />
+				<Parameter Name="description" Type="System.String, mscorlib" Direction="Optional" DesignerType="TextArea" InitialValue="" />
+				<Parameter Name="permissions" Type="System.String, mscorlib" Direction="Optional" DesignerType="TextArea" InitialValue="" />
+				<Parameter Name="error" Type="System.String, mscorlib" Direction="Out" DesignerType="ParameterNames"  />
+			</Parameters>
+		</Action>
+
+	</WorkflowActions>
+</Elements>

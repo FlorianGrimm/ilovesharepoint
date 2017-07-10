@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e4b7ff9d-f4b8-4dbf-ba01-6aedc129a981" solutionId="e4b7ff9d-f4b8-4dbf-ba01-6aedc129a981" resetWebServer="false" title="iLove SharePoint - Sandboxed Workflow Actions" description="iLove SharePoint - Sandboxed Workflow Actions" name="iLoveSharePoint.Sandbox.WorkflowActions" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="72af2b77-6b55-4645-a8d2-9e3c37d2c003" />
+  </features>
+</package>

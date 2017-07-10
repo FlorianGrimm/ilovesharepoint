@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Description="$Resources:WorkflowExternalEvenList_Description" GroupId="SiteCollectionAdmin" 
+                Id="ILoveSharePoint.Workflow.Activities.WaitForExternalEventList" 
+                Location="Microsoft.SharePoint.SiteSettings" RequireSiteAdministrator="true" Sequence="1000" 
+                Title="$Resources:WorkflowExternalEvenList_Title">
+  <UrlAction Url="~sitecollection/Lists/WaitForExternalEventList" />
+</CustomAction>
+</Elements>

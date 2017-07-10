@@ -1,0 +1,6 @@
+C:\Sources\ilovesharepoint\ILoveSharePoint.Sandbox.WorkflowActions\ILoveSharePoint.Sandbox.WorkflowActions\bin\Release\ILoveSharePoint.Sandbox.WorkflowActions.dll
+C:\Sources\ilovesharepoint\ILoveSharePoint.Sandbox.WorkflowActions\ILoveSharePoint.Sandbox.WorkflowActions\bin\Release\ILoveSharePoint.Sandbox.WorkflowActions.pdb
+C:\Sources\ilovesharepoint\ILoveSharePoint.Sandbox.WorkflowActions\ILoveSharePoint.Sandbox.WorkflowActions\bin\Release\Microsoft.Sharepoint.Sandbox.dll
+C:\Sources\ilovesharepoint\ILoveSharePoint.Sandbox.WorkflowActions\ILoveSharePoint.Sandbox.WorkflowActions\obj\Release\ResolveAssemblyReference.cache
+C:\Sources\ilovesharepoint\ILoveSharePoint.Sandbox.WorkflowActions\ILoveSharePoint.Sandbox.WorkflowActions\obj\Release\ILoveSharePoint.Sandbox.WorkflowActions.dll
+C:\Sources\ilovesharepoint\ILoveSharePoint.Sandbox.WorkflowActions\ILoveSharePoint.Sandbox.WorkflowActions\obj\Release\ILoveSharePoint.Sandbox.WorkflowActions.pdb

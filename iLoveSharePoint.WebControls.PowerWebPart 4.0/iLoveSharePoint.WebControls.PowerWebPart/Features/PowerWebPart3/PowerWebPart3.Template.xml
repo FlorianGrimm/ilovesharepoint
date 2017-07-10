@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature Id="5539D913-04DD-4b14-A012-A403D75CC81E" Title="iLove SharePoint - PowerWebPart 2010"
+         Scope="Site" Version="3.0.0.0" Hidden="FALSE" xmlns="http://schemas.microsoft.com/sharepoint/"
+         ImageUrl="iLoveSharePoint/PowerWebPartFeatureIcon3.jpg"
+         Description="The most powerfull Web Part on earth"
+         >
+  <ElementManifests>
+    <ElementManifest Location="PowerWebPart3\elements.xml" />
+    <ElementFile Location="PowerWebPart3\PowerWebPart3.webpart" />
+  </ElementManifests>
+</Feature>

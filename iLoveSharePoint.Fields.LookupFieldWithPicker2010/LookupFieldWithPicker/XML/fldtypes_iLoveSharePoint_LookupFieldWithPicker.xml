@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FieldTypes>
+  <FieldType>
+    <Field Name="TypeName">LookupFieldWithPicker</Field>
+    <Field Name="TypeDisplayName">$Resources:iLoveSharePoint.Fields.LookupFieldWithPicker,lookupWithPickerDisplayName;</Field>
+    <Field Name="TypeShortDescription">$Resources:iLoveSharePoint.Fields.LookupFieldWithPicker,lookupWithPickerDescription;</Field>
+    <Field Name="ParentType">Lookup</Field>
+    <Field Name="FieldTypeClass">iLoveSharePoint.Fields.LookupFieldWithPicker,iLoveSharePoint.Fields.LookupFieldWithPicker, Version=14.0.0.0, Culture=neutral, PublicKeyToken=3443098eba475529</Field>
+    <Field Name="FieldEditorUserControl">/_controltemplates/iLoveSharePoint.LookupFieldWithPicker/LookupFieldWithPickerEditor.ascx</Field>
+    <Field Name="Sortable">TRUE</Field>
+    <Field Name="Filterable">TRUE</Field>
+    <Field Name="AllowBaseTypeRendering">TRUE</Field>
+    <PropertySchema>
+      <Fields>
+        <Field Name="SearchableFields"
+               DisplayName="SearchableFields"
+               MaxLength="2147483647"
+               Hidden="TRUE"
+               Type="Text">
+          <Default></Default>
+        </Field>
+        <Field Name="CustomDefaultValue"
+               DisplayName="CustomDefaultValue"
+               MaxLength="2147483647"
+               Hidden="TRUE"
+               Type="Text">
+          <Default></Default>
+        </Field>
+        <Field Name="MaxSearchResults"
+              DisplayName="MaxSearchResults"
+              MaxLength="2147483647"
+              Hidden="TRUE"
+              Type="Text">
+          <Default></Default>
+        </Field>
+        <Field Name="EntityEditorRows"
+              DisplayName="EntityEditorRows"
+              MaxLength="2147483647"
+              Hidden="TRUE"
+              Type="Text">
+          <Default></Default>
+        </Field>
+        <Field Name="CustomVersion"
+              DisplayName="CustomVersion"
+              MaxLength="2147483647"
+              Hidden="TRUE"
+              Type="Text">
+          <Default>1.1.0.0</Default>
+        </Field>
+        <Field Name="CustomLookupList"
+              DisplayName="CustomLookupList"
+              MaxLength="2147483647"
+              Hidden="TRUE"
+              Type="Text">
+          <Default></Default>
+        </Field>
+       
+      </Fields>
+    </PropertySchema>
+
+  </FieldType>
+  <FieldType>
+    <Field Name="TypeName">LookupFieldWithPickerMulti</Field>
+    <Field Name="ParentType">LookupMulti</Field>
+    <Field Name="TypeDisplayName">$Resources:iLoveSharePoint.Fields.LookupFieldWithPicker,lookupWithPickerDisplayName;</Field>
+    <Field Name="TypeShortDescription">$Resources:iLoveSharePoint.Fields.LookupFieldWithPicker,lookupWithPickerDescription;</Field>
+    <Field Name="UserCreatable">FALSE</Field>
+    <Field Name="Sortable">FALSE</Field>
+    <Field Name="Filterable">TRUE</Field>
+    <Field Name="FieldTypeClass">iLoveSharePoint.Fields.LookupFieldWithPicker,iLoveSharePoint.Fields.LookupFieldWithPicker, Version=14.0.0.0, Culture=neutral, PublicKeyToken=3443098eba475529</Field>
+    <Field Name="FieldEditorUserControl">/_controltemplates/iLoveSharePoint.LookupFieldWithPicker/LookupFieldWithPickerEditor.ascx</Field>
+    <Field Name="AllowBaseTypeRendering">TRUE</Field>
+    <PropertySchema>
+      <Fields>
+        <Field Name="SearchableFields"
+               DisplayName="SearchableFields"
+               MaxLength="2147483647"
+               Hidden="TRUE"
+               Type="Text">
+          <Default></Default>
+        </Field>
+        <Field Name="CustomDefaultValue"
+               DisplayName="CustomDefaultValue"
+               MaxLength="2147483647"
+               Hidden="TRUE"
+               Type="Text">
+          <Default></Default>
+        </Field>
+        <Field Name="MaxSearchResults"
+              DisplayName="MaxSearchResults"
+              MaxLength="2147483647"
+              Hidden="TRUE"
+              Type="Text">
+          <Default></Default>
+        </Field>
+        <Field Name="EntityEditorRows"
+              DisplayName="EntityEditorRows"
+              MaxLength="2147483647"
+              Hidden="TRUE"
+              Type="Text">
+          <Default></Default>
+        </Field>
+        <Field Name="CustomVersion"
+              DisplayName="CustomVersion"
+              MaxLength="2147483647"
+              Hidden="TRUE"
+              Type="Text">
+          <Default>1.1.0.0</Default>
+        </Field>
+        <Field Name="CustomLookupList"
+             DisplayName="CustomLookupList"
+             MaxLength="2147483647"
+             Hidden="TRUE"
+             Type="Text">
+          <Default></Default>
+        </Field>
+      </Fields>
+    </PropertySchema>
+
+  </FieldType>
+</FieldTypes>

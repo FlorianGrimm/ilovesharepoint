@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="WaitForExternalEventList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/iLoveSharePoint.Activities2010-WaitForExternalEventList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x010053ded408a2de44089b44d83ae4c82ef3" Name="WaitForExternalWorkflowEventCT" Group="_Hidden" Description="iLove SharePoint - WaitForExternalWorkflowEventCT" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          <FieldRef ID="{D9E56D40-CD4A-484C-9D4B-73025F04F0EE}" Name="Ilsp_WebId" />
+          <FieldRef ID="{4E6BB5F1-DC32-4555-A716-F33EEF7E855F}" Name="Ilsp_WorkflowInstanceId" />
+          <FieldRef ID="{A201D842-B066-474E-8E8F-D017D717FEEF}" Name="Ilsp_CorrelationTokenId" />
+          <FieldRef ID="{19D281E6-B667-494E-8015-3E9AC4533A3E}" Name="Ilsp_WorkflowName" />
+          <FieldRef ID="{9D9EACEB-E663-483D-94F4-D9DBDB0E37AC}" Name="Ilsp_WorkflowStatusUrl" />
+        </FieldRefs>
+        <XmlDocuments>
+          <XmlDocument  NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+            <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+              <Display>_layouts/ILSPSPDActions/SendDataToWorkflow.aspx</Display>
+              <Edit>_layouts/ILSPSPDActions/SendDataToWorkflow.aspx</Edit>
+              <New>_layouts/ILSPSPDActions/SendDataToWorkflow.aspx</New>
+            </FormUrls>
+          </XmlDocument>
+        </XmlDocuments>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{D9E56D40-CD4A-484C-9D4B-73025F04F0EE}" DisplayName="WebId" Name="Ilsp_WebId" StaticName="Ilsp_WebId" Type="Text" Group="_Hidden" SourceID="http://schemas.microsoft.com/sharepoint/v3" >
+      </Field>
+      <Field ID="{4e6bb5f1-dc32-4555-a716-f33eef7e855f}" DisplayName="WorkflowInstanceId" Name="Ilsp_WorkflowInstanceId" StaticName="Ilsp_WorkflowInstanceId" Type="Text" Group="_Hidden" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+      </Field>
+      <Field ID="{a201d842-b066-474e-8e8f-d017d717feef}" DisplayName="CorrelationTokenId" Name="Ilsp_CorrelationTokenId" StaticName="Ilsp_CorrelationTokenId" Type="Text" Group="_Hidden" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+      </Field>
+      <Field ID="{19d281e6-b667-494e-8015-3e9ac4533a3e}" DisplayName="WorkflowName" Name="Ilsp_WorkflowName" StaticName="Ilsp_WorkflowName" Type="Text" Group="_Hidden" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+      </Field>
+      <Field ID="{9d9eaceb-e663-483d-94f4-d9dbdb0e37ac}" DisplayName="WorkflowStatusUrl" Name="Ilsp_WorkflowStatusUrl" StaticName="Ilsp_WorkflowStatusUrl" Type="URL" Group="_Hidden" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Attachments">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef ID="{D9E56D40-CD4A-484C-9D4B-73025F04F0EE}" Name="Ilsp_WebId" />
+          <FieldRef ID="{4E6BB5F1-DC32-4555-A716-F33EEF7E855F}" Name="Ilsp_WorkflowInstanceId" />
+          <FieldRef ID="{A201D842-B066-474E-8E8F-D017D717FEEF}" Name="Ilsp_CorrelationTokenId" />
+          <FieldRef ID="{19D281E6-B667-494E-8015-3E9AC4533A3E}" Name="Ilsp_WorkflowName" />
+          <FieldRef ID="{9D9EACEB-E663-483D-94F4-D9DBDB0E37AC}" Name="Ilsp_WorkflowStatusUrl" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

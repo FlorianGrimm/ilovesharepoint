@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="{59632C1B-6F35-4860-85DC-4091D35DBC60}">
+  <Assemblies>
+    <Assembly Location="ILoveSharePoint.UserService.dll" DeploymentTarget="GlobalAssemblyCache"/>
+  </Assemblies>
+  <RootFiles>
+    <RootFile Location="ISAPI\ILoveSharePoint\UserService.asmx"  />
+    <RootFile Location="ISAPI\ILoveSharePoint\UserServicedisco.aspx"/>
+    <RootFile Location="ISAPI\ILoveSharePoint\UserServicewsdl.aspx"/>
+  </RootFiles>
+  
+</Solution>

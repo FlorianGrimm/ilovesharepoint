@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="9cb834c4-4f5d-4ff4-ac6d-dfad2e8f037d"
+          Title="iLove SharePoint - SharePoint Designer Workflow Actions"
+          Description="Add SharePoint Designer Workflow Actions to AuthorizedTypes in the web.config"
+          Version="1.0.0.0"
+          Hidden="FALSE"
+          Scope="WebApplication"
+          DefaultResourceFile="core"
+          ReceiverAssembly="iLoveSharePoint.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eba025cae8366a95"
+          ReceiverClass="iLoveSharePoint.Activities.ActivitiesFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>
+  </ElementManifests>
+</Feature>

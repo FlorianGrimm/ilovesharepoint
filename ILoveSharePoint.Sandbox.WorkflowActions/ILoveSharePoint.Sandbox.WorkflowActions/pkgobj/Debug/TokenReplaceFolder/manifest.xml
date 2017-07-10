@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="e4b7ff9d-f4b8-4dbf-ba01-6aedc129a981" Title="iLove SharePoint - Sandboxed Workflow Actions" Description="iLove SharePoint - Sandboxed Workflow Actions" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="ILoveSharePoint.Sandbox.WorkflowActions.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="ILoveSharePoint.Sandbox.WorkflowActions_SandboxedWorkflowActions\Feature.xml" />
+  </FeatureManifests>
+</Solution>

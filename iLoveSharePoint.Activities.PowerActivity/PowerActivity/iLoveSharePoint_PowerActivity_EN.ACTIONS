@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowInfo Language="en-en">
+<Actions Sequential="then" Parallel="and">
+<Action Name="Execute PowerShell Script"
+	  ClassName="iLoveSharePoint.Activities.PowerActivity"
+	  Assembly="iLoveSharePoint.Activities.PowerActivity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8ecfa5d637948fe"
+	  AppliesTo="all"
+    UsesCurrentItem="true"
+	  Category="iLove SharePoint">
+  <RuleDesigner Sentence="Execute: %1 (Output: %2) ">
+    <FieldBind Field="Script" Text="PowerShell Script" Id="1" DesignerType="StringBuilder" />
+    <FieldBind Field="Output,OutputType" Text="Workflowvariable" Id="2" DesignerType="parameterNames" />
+  </RuleDesigner>
+  <Parameters>
+    <Parameter Name="Script" Type="System.String, mscorlib" Direction="In" />
+    <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+    <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+    <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+    <Parameter Name="Output"  Type="System.Object, mscorlib" Direction="Optional" />
+    <Parameter Name="OutputType" Type="System.String, mscorlib" Direction="Optional" />
+  </Parameters>
+	</Action>
+</Actions>
+</WorkflowInfo>

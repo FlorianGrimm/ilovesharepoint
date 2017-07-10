@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLoveSharePoint.Activities", "iLoveSharePoint.Activities\iLoveSharePoint.Activities.csproj", "{285C3413-0CC5-475F-874D-47A00AFAC041}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs02.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = iLoveSharePoint.Activities\\iLoveSharePoint.Activities.csproj
+		SccProjectName1 = iLoveSharePoint.Activities
+		SccLocalPath1 = iLoveSharePoint.Activities
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{285C3413-0CC5-475F-874D-47A00AFAC041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285C3413-0CC5-475F-874D-47A00AFAC041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285C3413-0CC5-475F-874D-47A00AFAC041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285C3413-0CC5-475F-874D-47A00AFAC041}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

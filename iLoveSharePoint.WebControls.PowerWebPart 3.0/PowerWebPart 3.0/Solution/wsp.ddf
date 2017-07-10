@@ -1,0 +1,37 @@
+﻿.OPTION EXPLICIT     ; Generate errors 
+.Set CabinetNameTemplate=iLoveSharePoint.PowerWebPart_3.0.wsp    
+.set DiskDirectoryTemplate=CDROM ; All cabinets go in a single directory
+.Set CompressionType=MSZIP;** All files are compressed in cabinet files
+.Set UniqueFiles="ON"
+.Set Cabinet=on
+.Set DiskDirectory1=Package\PowerWebPart
+
+Solution\manifest.xml manifest.xml
+iLoveSharePoint.WebControls.PowerWebPart.dll
+
+.Set DestinationDir="PowerWebPart3\"
+12\TEMPLATE\FEATURES\PowerWebPart3\elements.xml
+12\TEMPLATE\FEATURES\PowerWebPart3\feature.xml
+12\TEMPLATE\FEATURES\PowerWebPart3\PowerWebPart3.webpart
+
+.Set DestinationDir="LAYOUTS\iLoveSharePoint\"
+12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartScriptEditor3.aspx
+12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartSimpleTextEditor3.aspx
+12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartConfig3.aspx
+12\TEMPLATE\LAYOUTS\iLoveSharePoint\jquery-1.3.2.min.js
+12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartEditor3.js
+12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartDebugPing.aspx
+
+.Set DestinationDir="IMAGES\iLoveSharePoint\"
+12\TEMPLATE\IMAGES\iLoveSharePoint\PowerWebPartIcon3.gif
+12\TEMPLATE\IMAGES\iLoveSharePoint\PowerWebPartFeatureIcon3.jpg
+12\TEMPLATE\IMAGES\iLoveSharePoint\PowerWebPartPowerGuiIcon3.gif
+
+.Set DestinationDir="PowerWebPart3CentralAdmin\"
+12\TEMPLATE\FEATURES\PowerWebPart3CentralAdmin\feature.xml
+12\TEMPLATE\FEATURES\PowerWebPart3CentralAdmin\elements.xml
+
+.Set DestinationDir="PowerWebPart3CentralAdmin\Scripts"
+12\TEMPLATE\FEATURES\PowerWebPart3CentralAdmin\Scripts\template.ps1
+12\TEMPLATE\FEATURES\PowerWebPart3CentralAdmin\Scripts\templateEditor.ps1
+12\TEMPLATE\FEATURES\PowerWebPart3CentralAdmin\Scripts\core.ps1

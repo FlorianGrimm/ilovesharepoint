@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FieldTypes>
+  <FieldType>
+    <Field Name="TypeName">LookupFieldWithPicker</Field>
+    <Field Name="TypeDisplayName">$Resources:iLoveSharePoint.Fields.LookupFieldWithPicker,lookupWithPickerDisplayName;</Field>
+    <Field Name="TypeShortDescription">$Resources:iLoveSharePoint.Fields.LookupFieldWithPicker,lookupWithPickerDescription;</Field>
+    <Field Name="ParentType">Lookup</Field>
+    <Field Name="FieldTypeClass">iLoveSharePoint.Fields.LookupFieldWithPicker,iLoveSharePoint.Fields.LookupFieldWithPicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8ecfa5d637948fe</Field>
+    <Field Name="FieldEditorUserControl">/_controltemplates/LookupFieldWithPickerEditor.ascx</Field>
+    <Field Name="Sortable">TRUE</Field>
+    <Field Name="Filterable">TRUE</Field>
+    <Field Name="AllowBaseTypeRendering">TRUE</Field>
+  </FieldType>
+</FieldTypes>

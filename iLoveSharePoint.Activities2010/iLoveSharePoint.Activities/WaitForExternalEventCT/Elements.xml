@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x010053ded408a2de44089b44d83ae4c82ef3"
+               Name="WaitForExternalWorkflowEventCT"
+               Group="_Hidden"
+               Description="iLove SharePoint - WaitForExternalWorkflowEventCT"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{D9E56D40-CD4A-484C-9D4B-73025F04F0EE}" Name="Ilsp_WebId" />
+      <FieldRef ID="{4E6BB5F1-DC32-4555-A716-F33EEF7E855F}" Name="Ilsp_WorkflowInstanceId" />
+      <FieldRef ID="{A201D842-B066-474E-8E8F-D017D717FEEF}" Name="Ilsp_CorrelationTokenId" />
+      <FieldRef ID="{19D281E6-B667-494E-8015-3E9AC4533A3E}" Name="Ilsp_WorkflowName" />
+      <FieldRef ID="{9D9EACEB-E663-483D-94F4-D9DBDB0E37AC}" Name="Ilsp_WorkflowStatusUrl" />
+    </FieldRefs>
+    <XmlDocuments>
+      <XmlDocument  NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+        <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+          <Display>_layouts/ILSPSPDActions/SendDataToWorkflow.aspx</Display>
+          <Edit>_layouts/ILSPSPDActions/SendDataToWorkflow.aspx</Edit>
+          <New>_layouts/ILSPSPDActions/SendDataToWorkflow.aspx</New>
+        </FormUrls>
+      </XmlDocument>
+      </XmlDocuments>
+  </ContentType>
+  <Field ID="{D9E56D40-CD4A-484C-9D4B-73025F04F0EE}" DisplayName="WebId" Name="Ilsp_WebId" StaticName="Ilsp_WebId" Type="Text" Group="_Hidden" SourceID="http://schemas.microsoft.com/sharepoint/v3" ></Field>
+  <Field ID="{4E6BB5F1-DC32-4555-A716-F33EEF7E855F}" DisplayName="WorkflowInstanceId" Name="Ilsp_WorkflowInstanceId" StaticName="Ilsp_WorkflowInstanceId" Type="Text" Group="_Hidden" SourceID="http://schemas.microsoft.com/sharepoint/v3" ></Field>
+  <Field ID="{A201D842-B066-474E-8E8F-D017D717FEEF}" DisplayName="CorrelationTokenId" Name="Ilsp_CorrelationTokenId" StaticName="Ilsp_CorrelationTokenId" Type="Text" Group="_Hidden" SourceID="http://schemas.microsoft.com/sharepoint/v3"></Field>
+  <Field ID="{19D281E6-B667-494E-8015-3E9AC4533A3E}" DisplayName="WorkflowName" Name="Ilsp_WorkflowName" StaticName="Ilsp_WorkflowName" Type="Text" Group="_Hidden" SourceID="http://schemas.microsoft.com/sharepoint/v3"></Field>
+  <Field ID="{9D9EACEB-E663-483D-94F4-D9DBDB0E37AC}" DisplayName="WorkflowStatusUrl" Name="Ilsp_WorkflowStatusUrl" StaticName="Ilsp_WorkflowStatusUrl" Type="URL" Group="_Hidden"  SourceID="http://schemas.microsoft.com/sharepoint/v3"></Field>
+  
+</Elements>

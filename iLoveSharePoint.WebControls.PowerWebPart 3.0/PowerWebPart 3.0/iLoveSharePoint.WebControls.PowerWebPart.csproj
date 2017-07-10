@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72AF4178-9B40-4B22-8349-3E3FE7C82C5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iLoveSharePoint.WebControls</RootNamespace>
+    <AssemblyName>iLoveSharePoint.WebControls.PowerWebPart</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Nonshipping>true</Nonshipping>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Security, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Programme\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\iLoveSharePoint.Debug.Console\IDebugConsole.cs">
+      <Link>IDebugConsole.cs</Link>
+    </Compile>
+    <Compile Include="Debug\PowerWebPartDebugPing.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicControl.cs" />
+    <Compile Include="Debug\PowerWebPartDebugHost.cs" />
+    <Compile Include="Debug\PowerWebPartDebugHostUI.cs" />
+    <Compile Include="Debug\PowerWebPartUI.cs" />
+    <Compile Include="PowerWebPartConfig.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PowerWebPartHelper.cs" />
+    <Compile Include="PowerControl.cs" />
+    <Compile Include="PowerWebPart.cs" />
+    <Compile Include="PowerWebPartConstants.cs" />
+    <Compile Include="PowerWebPartEditor.cs" />
+    <Compile Include="PowerControlException.cs" />
+    <Compile Include="PowerWebPartFeatureReceiver.cs" />
+    <Compile Include="PowerWebPartProgressTemplate.cs">
+    </Compile>
+    <Compile Include="PowerWebPartStore.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IRenderProvider.cs" />
+    <Compile Include="SimpleTextEditor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="12\TEMPLATE\FEATURES\PowerWebPart3CentralAdmin\Scripts\template.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\PowerWebPart3CentralAdmin\Scripts\core.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\PowerWebPart3CentralAdmin\Scripts\templateEditor.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="key.snk" />
+    <None Include="12\TEMPLATE\FEATURES\PowerWebPart3\PowerWebPart3.webpart">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Package\PowerWebPart\Documentation\PowerWebPart V3.0 Manual.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Package\PowerWebPart\Setup.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Package\PowerWebPart\Tools\DebugConsole\iLoveSharePoint.Debug.Console.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Package\PowerWebPart\Tools\PowerGUILauncher\iLoveSharePoint.PowerGuiLauncher_1.0_090408.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Package\PowerWebPart\Tools\SignPowerWebPartFile.ps1" />
+    <None Include="Solution\wsp.ddf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Package\_CreateZip.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="12\TEMPLATE\FEATURES\PowerWebPart3CentralAdmin\elements.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\PowerWebPart3CentralAdmin\feature.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\PowerWebPart3\feature.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\FEATURES\PowerWebPart3\elements.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\IMAGES\iLoveSharePoint\PowerWebPartIcon3.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\IMAGES\iLoveSharePoint\PowerWebPartPowerGuiIcon3.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\IMAGES\iLoveSharePoint\PowerWebPartFeatureIcon3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartDebugPing.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartConfig3.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartSimpleTextEditor3.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\iLoveSharePoint\jquery-1.3.2.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartEditor3.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Package\PowerWebPart\Tools\DebugConsole\iLoveSharePoint.Debug.Console.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Solution\manifest.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="12\TEMPLATE\LAYOUTS\iLoveSharePoint\PowerWebPartScriptEditor3.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Package\PowerWebPart\Readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Package\PowerWebPart\Setup.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)" == "Debug" GOTO DEBUG
+if "$(ConfigurationName)" == "Release" GOTO RELEASE
+
+:DEBUG
+xcopy /Y /E "12" "%25commonprogramfiles%25\Microsoft Shared\web server extensions\12\"    
+
+"%25programfiles%25\Microsoft Visual Studio 8\SDK\v2.0\Bin\gacutil.exe" -i "$(TargetPath)"
+"%25windir%25\system32\iisapp.vbs" /a "SharePoint - 80" /r
+
+exit
+
+:RELEASE
+makecab /f Solution\wsp.ddf
+powershell.exe ".\Package\_CreateZip.ps1"
+
+exit</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,27 @@
+﻿.OPTION EXPLICIT     ; Generate errors 
+.Set CabinetNameTemplate=iLoveSharePoint.Lists.ListWithoutTitle.wsp     
+.set DiskDirectoryTemplate=CDROM ; All cabinets go in a single directory
+.Set CompressionType=MSZIP;** All files are compressed in cabinet files
+.Set UniqueFiles="ON"
+.Set Cabinet=on
+.Set DiskDirectory1=Package
+
+manifest.xml
+iLoveSharePoint.Lists.ListWithoutTitle.dll
+
+
+.Set DestinationDir="ListWithoutTitle\"
+ListDefinition.xml
+feature.xml
+
+
+.Set DestinationDir="ListWithoutTitle\ListWithoutTitle\"
+ListWithoutTitle\AllItems.aspx
+ListWithoutTitle\DispForm.aspx
+ListWithoutTitle\EditForm.aspx
+ListWithoutTitle\NewForm.aspx
+ListWithoutTitle\schema.xml
+
+.Set DestinationDir="Resources\"
+Resources\iLoveSharePoint.Lists.ListWithoutTitle.resx
+Resources\iLoveSharePoint.Lists.ListWithoutTitle.de-de.resx

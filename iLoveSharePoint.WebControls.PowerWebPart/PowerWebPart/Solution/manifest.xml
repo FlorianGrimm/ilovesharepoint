@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Solution SolutionId="F9C9365B-A029-4449-9BEE-9C9E43084DE6"  xmlns="http://schemas.microsoft.com/sharepoint/">
+  <FeatureManifests>
+    <FeatureManifest Location="PowerWebPart\feature.xml" />
+  </FeatureManifests>
+  <TemplateFiles>
+    <TemplateFile Location="LAYOUTS\iLoveSharePoint\PowerWebPartScriptEditor.aspx"/>
+    <TemplateFile Location="IMAGES\iLoveSharePoint\PowerWebPartFeatureIcon.jpg"/>
+    <TemplateFile Location="IMAGES\iLoveSharePoint\PowerWebPartIcon.jpg"/>
+  </TemplateFiles>
+  <Assemblies>
+    <Assembly DeploymentTarget="GlobalAssemblyCache" Location="iLoveSharePoint.WebControls.PowerWebPart.dll">
+      <SafeControls>
+        <SafeControl Assembly="iLoveSharePoint.WebControls.PowerWebPart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8ecfa5d637948fe" Namespace="iLoveSharePoint.WebControls" TypeName="*" Safe="True" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+</Solution>

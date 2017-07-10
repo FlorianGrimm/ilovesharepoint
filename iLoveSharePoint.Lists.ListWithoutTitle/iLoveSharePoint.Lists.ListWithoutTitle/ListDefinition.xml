@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="30767ed4-595a-4f35-93a4-8b724d1b2f44" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate Name="ListWithoutTitle" DisplayName="$Resources:iLoveSharePoint.Lists.ListWithoutTitle,ListWithoutTitleTitle" Description="$Resources:iLoveSharePoint.Lists.ListWithoutTitle,ListWithoutTitleDescription" BaseType="0" Type="1001" OnQuickLaunch="TRUE" SecurityBits="11" Sequence="410" Image="/_layouts/images/itgen.gif" />
+</Elements>

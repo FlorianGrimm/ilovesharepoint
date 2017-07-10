@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="FEE1736B-6DED-4521-8B06-66998B705114" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Url="_catalogs/wp" RootWebOnly="TRUE">
+    <File Url="PowerWebPart.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="iLove SharePoint" />
+    </File>
+    <File Url="PowerWebPartWithExample.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="iLove SharePoint" />
+    </File>
+  </Module>
+</Elements>

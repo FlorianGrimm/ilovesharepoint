@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:RegexReplaceActivity_Name"
+      ClassName="ILoveSharePoint.Workflow.Activities.RegexReplaceActivity"
+      Assembly="$SharePoint.Project.AssemblyFullName$"
+      AppliesTo="all"
+      UsesCurrentItem="false"
+      Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:RegexReplaceActivity_Sentence">
+        <FieldBind Field="Regex" Text="$Resources:RegexReplaceActivity_Regex" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="Input" Text="$Resources:RegexReplaceActivity_Input" Id="2" DesignerType="TextArea" />
+        <FieldBind Field="Replace" Text="$Resources:RegexReplaceActivity_Replace" Id="3" DesignerType="TextArea" />
+        <FieldBind Field="Result" Text="$Resources:RegexReplaceActivity_Result" Id="4" DesignerType="ParameterNames" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="Input" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Regex" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Replace" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Result"  Type="System.String, mscorlib" Direction="Out" />
+      </Parameters>
+    </Action>
+  </WorkflowActions>
+</Elements>

@@ -1,0 +1,2 @@
+﻿<%@ Assembly Name="iLoveSharePoint.WebControls.PowerWebPart, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7f77686204a6dd39"%>
+<%@ Page Language="C#" Inherits="iLoveSharePoint.WebControls.Debug.PowerWebPartDebugPing" %>

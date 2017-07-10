@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:WebServiceActivity_Name"
+        ClassName="ILoveSharePoint.Workflow.Activities.WebServiceActivity"
+        Assembly="$SharePoint.Project.AssemblyFullName$"
+        AppliesTo="all"
+        UsesCurrentItem="false"
+        Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:WebServiceActivity_Sentence">
+        <FieldBind Field="Address" Text="$Resources:WebServiceActivity_Address" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="SoapVersion" DesignerType="Dropdown" Id="2" Text="$Resources:WebServiceActivity_SoapVersion">
+          <Option Name="SOAP 1.1" Value="SOAP11"/>
+          <Option Name="SOAP 1.2" Value="SOAP12"/>
+        </FieldBind>
+        <FieldBind Field="Action" Text="$Resources:WebServiceActivity_Action" Id="3" DesignerType="TextArea" />
+        <FieldBind Field="Envelope" Text="$Resources:WebServiceActivity_Envelope" Id="4" DesignerType="StringBuilder" />
+        <FieldBind Field="Response,ResponseType" Text="$Resources:WebServiceActivity_Response" Id="5" DesignerType="ParameterNames" />
+        <FieldBind Field="User" Text="$Resources:WebServiceActivity_User" Id="6" DesignerType="TextArea" />
+        <FieldBind Field="Password" Text="$Resources:WebServiceActivity_Password" Id="7" DesignerType="TextArea" />
+        <FieldBind Field="SecureStoreAppId" Text="$Resources:WebServiceActivity_AppId" Id="8" DesignerType="TextBox" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="SoapVersion" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Address" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Envelope" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Action" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="User" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Password" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="SecureStoreAppId" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="Response"  Type="System.Object, mscorlib" Direction="Optional" />
+        <Parameter Name="ResponseType" Type="System.String, mscorlib" Direction="Optional" />
+      </Parameters>
+    </Action>
+    
+  </WorkflowActions>
+</Elements>

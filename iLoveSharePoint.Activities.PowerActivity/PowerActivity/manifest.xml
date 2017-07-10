@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="{2AC3A7B3-A79A-4600-8AAF-F23FDB432AB9}" >
+  <Assemblies>
+    <Assembly Location="iLoveSharePoint.Activities.PowerActivity.dll" DeploymentTarget="GlobalAssemblyCache"></Assembly>
+  </Assemblies>
+  <RootFiles>
+    <RootFile Location="TEMPLATE\1031\Workflow\iLoveSharePoint_PowerActivity_DE.ACTIONS"  />
+    <RootFile Location="TEMPLATE\1033\Workflow\iLoveSharePoint_PowerActivity_EN.ACTIONS"/>
+  </RootFiles>
+</Solution>

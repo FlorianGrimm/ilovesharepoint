@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:CreateXmlFileActivity_Name"
+      ClassName="ILoveSharePoint.Workflow.Activities.CreateXmlFileActivity"
+      Assembly="$SharePoint.Project.AssemblyFullName$"
+      AppliesTo="all"
+      UsesCurrentItem="false"
+      Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:CreateXmlFileActivity_Sentence">
+        <FieldBind Field="ListId" Text="$Resources:CreateXmlFileActivity_ListId" Id="1" DesignerType="ListNames" />
+        <FieldBind Field="FileName" Text="$Resources:CreateXmlFileActivity_FileName" Id="2" DesignerType="TextArea" />
+        <FieldBind Field="Xml" Text="$Resources:CreateXmlFileActivity_Xml" Id="3" DesignerType="TextArea" />
+        <FieldBind Field="Overwrite" Text="$Resources:CreateXmlFileActivity_Overwrite" Id="4" DesignerType="Bool" />
+        <FieldBind Field="FileUrl" Text="$Resources:CreateXmlFileActivity_FileUrl" Id="5" DesignerType="ParameterNames" />
+        <FieldBind Field="FileItemId" Text="$Resources:CreateXmlFileActivity_FileItemId" Id="6" DesignerType="ParameterNames" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="FileName" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Xml" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Overwrite" Type="System.Boolean, mscorlib" Direction="In" />
+        <Parameter Name="FileUrl"  Type="System.String, mscorlib" Direction="Out" DesignerType="ParameterNames" />
+        <Parameter Name="FileItemId" Type="Microsoft.SharePoint.Workflow.SPItemKey, Microsoft.SharePoint" Direction="Out" DesignerType="ParameterNames" />
+      </Parameters>
+    </Action>
+  </WorkflowActions>
+</Elements>

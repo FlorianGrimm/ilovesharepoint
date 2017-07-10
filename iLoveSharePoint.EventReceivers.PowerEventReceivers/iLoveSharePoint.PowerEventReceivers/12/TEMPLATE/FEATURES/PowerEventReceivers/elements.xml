@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="F70AF9B5-695C-4962-9BE5-D20A2F7065A1" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!--<CustomActionGroup
+          Id="iLoveSharePoint.EventReceivers.ListSettings"
+          Location="Microsoft.SharePoint.ListEdit"
+          Title="iLove SharePoint"
+          Sequence="10" 
+          Description="iLove SharePoint..."/>-->
+  <CustomAction
+          Id="iLoveSharePoint.EventReceivers.ListSettings.ItemEventReceiver"
+          Location="Microsoft.SharePoint.ListEdit"
+          GroupId="GeneralSettings"
+          Title="Power Item Event Receiver"
+          RegistrationType="List"
+          RequireSiteAdministrator="TRUE">
+    <UrlAction Url="~site/_layouts/iLoveSharePoint/ConfigurePowerEventReceiver.aspx?List={ListId}&amp;Type=Item"/>
+  </CustomAction>
+  <CustomAction
+          Id="iLoveSharePoint.EventReceivers.ListSettings.ListEventReceiver"
+          Location="Microsoft.SharePoint.ListEdit"
+          GroupId="GeneralSettings"
+          Title="Power List Event Receiver"
+          RegistrationType="List"
+          RequireSiteAdministrator="TRUE">
+      <UrlAction Url="~site/_layouts/iLoveSharePoint/ConfigurePowerEventReceiver.aspx?List={ListId}&amp;Type=List"/>
+  </CustomAction>
+  <!--<CustomActionGroup
+		  Id="iLoveSharePoint.SiteSettings"
+		  Location="Microsoft.SharePoint.SiteSettings"
+		  Sequence="101"
+		  Title="iLove SharePoint">
+  </CustomActionGroup>
+  <CustomAction
+        Id="iLoveSharePoint.EventReceivers.ListSettings.ListEventReceiver"
+        Location="Microsoft.SharePoint.SiteSettings"
+        GroupId="iLoveSharePoint.SiteSettings"
+        Title="Power Web Event Receiver"
+        RequireSiteAdministrator="TRUE">
+    <UrlAction Url="~site/_layouts/iLoveSharePoint/ConfigurePowerEventReceiver.aspx?Type=Web"/>
+  </CustomAction>-->
+
+
+</Elements>

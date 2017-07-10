@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:HttpRequestActivity_Name"
+        ClassName="ILoveSharePoint.Workflow.Activities.HttpRequestActivity"
+        Assembly="$SharePoint.Project.AssemblyFullName$"
+        AppliesTo="all"
+        UsesCurrentItem="false"
+        Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:HttpRequestActivity_Sentence"> 
+        <FieldBind Field="Address" Text="$Resources:HttpRequestActivity_Address" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="Method" DesignerType="Dropdown" Id="2" Text="$Resources:HttpRequestActivity_Method">
+          <Option Name="GET" Value="GET"/>
+          <Option Name="POST" Value="POST"/>
+          <Option Name="DELETE" Value="DELETE"/>
+          <Option Name="PUT" Value="PUT"/>
+          <Option Name="MERGE" Value="MERGE"/>
+        </FieldBind>
+        <FieldBind Field="Address" Text="$Resources:HttpRequestActivity_Address" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="Method" Text="$Resources:HttpRequestActivity_Method" Id="2" DesignerType="TextArea" />           
+        <FieldBind Field="Header" Text="$Resources:HttpRequestActivity_Header" Id="3" DesignerType="TextArea" />
+        <FieldBind Field="Body" Text="$Resources:HttpRequestActivity_Body" Id="4" DesignerType="StringBuilder" />
+        <FieldBind Field="Response,ResponseType" Text="$Resources:HttpRequestActivity_Response" Id="5" DesignerType="ParameterNames" />
+        <FieldBind Field="User" Text="$Resources:HttpRequestActivity_User" Id="6" DesignerType="TextArea" />
+        <FieldBind Field="Password" Text="$Resources:HttpRequestActivity_Password" Id="7" DesignerType="TextArea" />
+        <FieldBind Field="SecureStoreAppId" Text="$Resources:HttpRequestActivity_AppId" Id="8" DesignerType="TextBox" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="Address" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Method" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Header" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Body" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="User" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Password" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="SecureStoreAppId" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="Response"  Type="System.Object, mscorlib" Direction="Optional" />
+        <Parameter Name="ResponseType" Type="System.String, mscorlib" Direction="Optional" />
+      </Parameters>
+    </Action>
+
+  </WorkflowActions>
+</Elements>

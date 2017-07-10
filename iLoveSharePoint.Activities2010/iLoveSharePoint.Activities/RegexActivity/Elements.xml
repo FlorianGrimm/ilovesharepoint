@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:RegexActivity_Name"
+      ClassName="ILoveSharePoint.Workflow.Activities.RegexActivity"
+      Assembly="$SharePoint.Project.AssemblyFullName$"
+      AppliesTo="all"
+      UsesCurrentItem="false"
+      Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:RegexActivity_Sentence">
+        <FieldBind Field="Regex" Text="$Resources:RegexActivity_Regex" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="Input" Text="$Resources:RegexActivity_Input" Id="2" DesignerType="TextArea" />    
+        <FieldBind Field="Result" Text="$Resources:RegexActivity_Result" Id="3" DesignerType="ParameterNames" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="Input" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Regex" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Result"  Type="System.String, mscorlib" Direction="Out" />
+      </Parameters>
+    </Action>
+  </WorkflowActions>
+</Elements>

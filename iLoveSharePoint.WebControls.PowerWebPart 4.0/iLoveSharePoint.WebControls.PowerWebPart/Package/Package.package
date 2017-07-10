@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="643c52d9-2575-4768-96e8-73388882ba99" solutionId="d3d264ac-dfa3-4140-8da7-c7b33393526f" resetWebServer="false" title="iLove SharePoint PowerWebPart 2010 " name="iLoveSharePoint.PowerWebPart2010" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="cdff3cb4-a421-484f-a42d-49e401212f96" />
+    <featureReference itemId="230a72ce-8019-4025-8b04-400586513c18" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="1f3b71a3-2289-4a37-9fdf-f7541b7dc878" />
+    <projectItemReference itemId="4e860e8c-992e-4e7d-ac1a-16d52c39ed5d" />
+  </projectItems>
+</package>

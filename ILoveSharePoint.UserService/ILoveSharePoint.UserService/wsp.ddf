@@ -1,0 +1,16 @@
+﻿.OPTION EXPLICIT     ; Generate errors 
+.Set CabinetNameTemplate=ILoveSharePoint.UserService.wsp     
+.set DiskDirectoryTemplate=CDROM ; All cabinets go in a single directory
+.Set CompressionType=MSZIP;** All files are compressed in cabinet files
+.Set UniqueFiles="ON"
+.Set Cabinet=on
+.Set DiskDirectory1=Package
+
+manifest.xml
+ILoveSharePoint.UserService.dll
+
+.Set DestinationDir="ISAPI\ILoveSharePoint"
+UserService.asmx
+UserServicedisco.aspx
+UserServicewsdl.aspx
+

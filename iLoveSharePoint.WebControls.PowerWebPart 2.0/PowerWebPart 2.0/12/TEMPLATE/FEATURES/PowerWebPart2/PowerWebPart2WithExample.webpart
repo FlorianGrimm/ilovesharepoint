@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<type name="iLoveSharePoint.WebControls.PowerWebPart, iLoveSharePoint.WebControls.PowerWebPart, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7f77686204a6dd39" />
+			<importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">PowerWebPart 2.0 with example</property>
+			  <property name="Description" type="string">iLove SharePoint PowerShell WebPart with Example Script Code</property>
+        <property name="CatalogIconImageUrl" type="string" >/_layouts/images/iLoveSharePoint/PowerWebPartIcon2.jpg</property>
+        <property name="Script" type="string">
+######## 1. Initialize ##########
+
+## declare global variables and functions
+#$button = $null
+#$lastClickTime = $null
+
+######## 2. Create Controls ########
+
+## create ASP.NET controls
+#function CreateControls($controls)
+#{
+  #$button = New-Object System.Web.UI.WebControls.Button
+  #$this.RegisterForEvent($button,'Click','Handle-ButtonClick')
+  #$controls.Add($button)
+#}
+
+######## 3. Load ########
+
+## load data
+#function Load
+#{
+  #if($isPostBack -eq $false)
+  #{
+    #$button.Text = 'Click Me'
+  #}
+#}
+
+######## 4. Handle Events ########
+
+## handle control events
+## register for an event with "$this.RegisterForEvent($control, 'eventName','callback function name')"
+#function Handle-ButtonClick($sender, $args)
+#{
+   #$lastClickTime = [System.DateTime]::Now
+#}
+
+## will be fired if the AJAX timer elapse
+#function Refresh{}
+
+
+######### 5. WebPart Connections #########
+
+#### a) Providing ####
+
+## returns an object containing the properties you want to provide (only for reflection)
+#function Get-ObjectSchema{ return $null }
+
+## returns an object matching the schema defined in the Get-RowSchema function
+#function Send-Object{ return $null }
+
+## returns a collection of objects matching the schema defined in Get-RowSchema function
+#function Send-Collection{ return $null }
+
+#### b) Consuming ####
+
+## receives an object from a webpart row provider
+#function Receive-Object($object, $schema){}
+
+## receives a collection of objects from a webpart table provider
+#function Receive-Collection($collection, $schema){}
+
+
+######### 6. Bind #########
+
+## data bind the controls created in the construction stage
+#function Bind
+#{ 
+   #if($lastClickTime -ne $null)
+   #{
+      #$button.Text = $lastClickTime.ToLongTimeString()
+   #}
+#}
+
+######### 7. Render  #########
+
+## define the render logic
+function Render($writer)
+{
+  $writer.Write("&lt;a href='http://www.iLoveSharePoint.com'&gt;iLove SharePoint&lt;/a&gt;")
+  #$button.RenderControl($writer)
+}
+
+######## 8. Error Handling #########
+
+## render custom error message
+#function Error($exception, $writer){}
+
+######### 9. Unload #########
+
+## clean up resources if needed
+#function Unload()
+#{
+#}
+
+######### Predefined Variables #########
+## $this (iLoveSharePoint.WebControls.PowerWebPart)
+## $page (System.Web.UI.Page)
+## $viewState (System.Web.UI.StateBag)
+## $isPostBack (System.Boolean)
+## $spContext (Microsoft.SharePoint.SPContext)
+## $httpContext (System.Web.HttpContext)
+## $this.ScriptManager (System.Web.UI.ScriptManager)
+## $site (Microsoft.SharePoint.SPSite)
+## $web (Microsoft.SharePoint.SPWeb)
+## $list (Microsoft.SharePoint.SPList)
+## $item (Microsoft.SharePoint.SPListItem)
+## $param1 (string; Parameter 1)
+## $param2 (string; Parameter 2)
+## $param3 (string; Parameter 3)
+## $param4 (string; Parameter 4)
+## $ajaxEnabled (bool; default is false)
+## $refreshInterval (int; defines the auto refresh interval in AJAX mode milliseconds; auto refresh off=0)
+## $progressTemplate (string; defines the html to show the progress while an AJAX round trip)
+## $progressDispayAfter (int; defines the value in milliseconds before the progress control is displayed)
+## $progressDynamicLayout (bool; defines whether the progress template is rendered dynamically or not)
+
+######### Predefined Functions #########
+## Get-SPSite -webUrl
+## Get-SPWeb -webUrl
+## Get-SPList -webUrl -listName
+## Select-SPListItem -columns (e.g. $list.Items | Select-SPListItem ID,Title )
+
+######## Progress Template #########
+#$progressTemplate="&lt;div style='position:absolute;z-index:9;filter:alpha(opacity=70);background-color:#FFFFFF;width:expression(this.parentNode.parentNode.offsetWidth);height:expression(this.parentNode.parentNode.offsetHeight)'&gt;&lt;/div&gt; &lt;div style='position:absolute;z-index:10;background-image:url(/_layouts/images/GEARS_AN.GIF); background-repeat:no-repeat;background-position:center;width:100%;height:expression(parentNode.parentNode.offsetHeight)'&gt;&lt;/div&gt;"
+
+########### http://www.iLoveSharePoint.com ##########
+############## by Christian Glessner #############
+        </property>
+        <property name="PredefinedFunctions" type="string">
+$ErrorActionPreference = "Stop"
+$progressTemplate="&lt;div style='position:absolute;z-index:9;filter:alpha(opacity=70);background-color:#FFFFFF;width:expression(this.parentNode.parentNode.offsetWidth);height:expression(this.parentNode.parentNode.offsetHeight)'&gt;&lt;/div&gt; &lt;div style='position:absolute;z-index:10;background-image:url(/_layouts/images/GEARS_AN.GIF); background-repeat:no-repeat;background-position:center;width:100%;height:expression(parentNode.parentNode.offsetHeight)'&gt;&lt;/div&gt;"
+
+# returns the SPSite at the specified URL
+function global:Get-SPSite ([String]$webUrl=$(throw 'Parameter -webUrl is missing!'))
+{
+  return New-Object -TypeName "Microsoft.SharePoint.SPSite" -ArgumentList "$webUrl";
+}
+
+# returns the SPWeb object from the specified URL
+function global:Get-SPWeb ([String]$webUrl=$(throw 'Parameter -webUrl is missing!'))
+{
+  $site =  New-Object -TypeName "Microsoft.SharePoint.SPSite" -ArgumentList "$webUrl";
+  return $site.OpenWeb();
+}
+
+# returns the SPList object from the specified URL and List name
+function global:Get-SPList ([String]$webUrl=$(throw 'Parameter -webUrl is missing!'),
+[String]$listName=$(throw 'Parameter -listName is missing!'))
+{
+  $site =  New-Object -TypeName "Microsoft.SharePoint.SPSite" -ArgumentList "$webUrl";
+  $web = $site.OpenWeb();
+  return $web.Lists[$listName]
+}
+
+# returns a PSObject from a SPListItem with the provided columns as properties (e.g. $customerList.Items | Select-SPListItem Name,Country | Group-Object Country)
+function global:Select-SPListItem($columns=$(throw 'Parameter -columns is missing!'))
+{
+  process
+  {
+    if($_ -eq $null)
+    {
+      return $null
+    }
+
+    if($_ -isnot [Microsoft.SharePoint.SPListItem])
+    {
+      throw "Object is not a SPListItem!"
+    }
+
+    $select = $null
+    foreach($col in $columns)
+    {
+      if($_.Fields.ContainsField($col) -eq $true)
+      {
+        if($select -ne $null)
+        {
+        $select+=','
+        }
+        else
+        {
+          $select = "`$_ | Select-Object "
+        }
+
+        $select += "@{Name='$col';Expression={`$_.Item('$col')}}"
+      }
+    }
+    Invoke-Expression -Command $select
+  }
+}
+
+      </property>
+      </properties>
+		</data>
+	</webPart>
+</webParts>

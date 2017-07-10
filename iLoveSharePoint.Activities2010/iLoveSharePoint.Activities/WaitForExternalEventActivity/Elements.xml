@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:WaitForExternalEventActivity_Name"
+        ClassName="ILoveSharePoint.Workflow.Activities.WaitForExternalEventActivity"
+        Assembly="$SharePoint.Project.AssemblyFullName$"
+        Category="iLove SharePoint 2010"
+        AppliesTo="all">
+      <RuleDesigner Sentence="$Resources:WaitForExternalEventActivity_Sentence">
+        <FieldBind Field="ExternalData" Text="$Resources:WaitForExternalEventActivity_ExternalData" DesignerType="ParameterNames" Id="1"/>
+        <FieldBind Field="CorrelationIdentifier" Text="$Resources:WaitForExternalEventActivity_CorrelationIdentifier" DesignerType="Text" Id="2"/>
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="CorrelationIdentifier" Type="System.String, mscorlib" Direction="Optional" DesignerType="TextArea" Description="" />
+        <Parameter Name="ExternalData" Type="System.String, mscorlib" Direction="Out" DesignerType="ParameterNames" Description="" />
+      </Parameters>
+    </Action>
+  </WorkflowActions>
+</Elements>

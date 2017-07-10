@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="Create Site Action, Create Group Action, Add Users to Group" Id="f3924673-cc40-41d9-9f41-db8b49333c11" Scope="Site" Title="iLove SharePoint - Sandboxed Workflow Actions">
+  <ElementManifests>
+    <ElementManifest Location="CreateSiteAction\Elements.xml" />
+    <ElementManifest Location="CreateGroupAction\Elements.xml" />
+    <ElementManifest Location="AddUsersToGroupAction\Elements.xml" />
+  </ElementManifests>
+</Feature>

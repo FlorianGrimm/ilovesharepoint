@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://iLoveSharePoint.com/Workflow/Activities/Services" elementFormDefault="qualified" targetNamespace="http://iLoveSharePoint.com/Workflow/Activities/Services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vxsp2010cg1/_vti_bin/ILSPSPDActions_WorkflowExternalDataExchange.svc/mex?xsd=xsd2" namespace="http://iLoveSharePoint.com/Workflow/Activities/Services/Data" />
+  <xs:element name="SendDataToWorkflow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://iLoveSharePoint.com/Workflow/Activities/Services/Data" minOccurs="0" name="externalData" nillable="true" type="q1:WorkflowExternalData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendDataToWorkflowResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

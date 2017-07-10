@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:GetParentFolderActivity_Name"
+    ClassName="ILoveSharePoint.Workflow.Activities.GetParentFolderActivity"
+    Assembly="$SharePoint.Project.AssemblyFullName$"
+    AppliesTo="all"
+    UsesCurrentItem="false"
+    Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:GetParentFolderActivity_Sentence">
+        <FieldBind Field="ListId,ListItem" Text="$Resources:GetParentFolderActivity_ListItem" Id="1" DesignerType="ChooseListItem" />
+        <FieldBind Field="FolderId" Text="$Resources:GetParentFolderActivity_FolderItemId" Id="2" DesignerType="ParameterNames" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="FolderId" Type="Microsoft.SharePoint.Workflow.SPItemKey, Microsoft.SharePoint" Direction="Out" DesignerType="ParameterNames"/>
+      </Parameters>
+    </Action>
+  </WorkflowActions>
+</Elements>

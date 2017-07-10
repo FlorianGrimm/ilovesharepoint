@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="{392617B3-9E5C-469c-8F37-4196ED964384}" >
+  <Assemblies>
+    <Assembly Location="iLoveSharePoint.Fields.LookupFieldWithPicker.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="iLoveSharePoint.Fields.LookupFieldWithPicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8ecfa5d637948fe" Namespace="iLoveSharePoint.Fields" TypeName="*" Safe="True" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <RootFiles>
+    <RootFile Location="TEMPLATE\XML\fldtypes_iLoveSharePoint_LookupFieldWithPicker.xml"  />
+    <RootFile Location="TEMPLATE\CONTROLTEMPLATES\LookupFieldWithPickerEditor.ascx"/>
+    <RootFile Location="Resources\iLoveSharePoint.Fields.LookupFieldWithPicker.resx"  />
+    <RootFile Location="Resources\iLoveSharePoint.Fields.LookupFieldWithPicker.de-de.resx"  />
+    <RootFile Location="CONFIG\Resources\iLoveSharePoint.Fields.LookupFieldWithPicker.resx"  />
+    <RootFile Location="CONFIG\Resources\iLoveSharePoint.Fields.LookupFieldWithPicker.de-de.resx"  />
+  </RootFiles>
+</Solution>

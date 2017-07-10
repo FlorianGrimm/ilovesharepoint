@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0f8f9bd2-2319-41e8-839e-b7a745ecb752" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vxsp2010cg1/sites/spd/_vti_bin/ILSPSPDActions_WorkflowExternalDataExchange.svc/mex" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WorkflowExternalDataExchange2.wsdl" MetadataType="Wsdl" ID="f54403cf-6a46-41e3-83e2-3e790a9ef79c" SourceId="1" SourceUrl="http://vxsp2010cg1/_vti_bin/ILSPSPDActions_WorkflowExternalDataExchange.svc/mex?wsdl" />
+    <MetadataFile FileName="mex1.wsdl" MetadataType="Wsdl" ID="060fbb66-5da7-464f-98b7-4a1407ba1f0c" SourceId="1" SourceUrl="http://vxsp2010cg1/_vti_bin/ILSPSPDActions_WorkflowExternalDataExchange.svc/mex?wsdl=wsdl0" />
+    <MetadataFile FileName="mex2.xsd" MetadataType="Schema" ID="a4f4c1c2-b390-41e1-863b-1e2b3254d94d" SourceId="1" SourceUrl="http://vxsp2010cg1/_vti_bin/ILSPSPDActions_WorkflowExternalDataExchange.svc/mex?xsd=xsd1" />
+    <MetadataFile FileName="mex.xsd" MetadataType="Schema" ID="fd1045a8-f0bf-4c2f-a5f9-1fd2cb6ef267" SourceId="1" SourceUrl="http://vxsp2010cg1/_vti_bin/ILSPSPDActions_WorkflowExternalDataExchange.svc/mex?xsd=xsd2" />
+    <MetadataFile FileName="WorkflowExternalDataExchange21.wsdl" MetadataType="Wsdl" ID="0f683b5b-5dc7-4e18-b9a2-69ee5b55d9ab" SourceId="1" SourceUrl="http://vxsp2010cg1/sites/spd/_vti_bin/ILSPSPDActions_WorkflowExternalDataExchange.svc/mex" />
+    <MetadataFile FileName="mex21.xsd" MetadataType="Schema" ID="c28e0c5a-e630-4c70-b727-37c768361804" SourceId="1" SourceUrl="http://vxsp2010cg1/_vti_bin/ILSPSPDActions_WorkflowExternalDataExchange.svc/mex?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

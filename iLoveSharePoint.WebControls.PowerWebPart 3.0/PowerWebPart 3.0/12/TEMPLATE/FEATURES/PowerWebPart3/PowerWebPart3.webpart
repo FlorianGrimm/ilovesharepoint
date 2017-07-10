@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<type name="iLoveSharePoint.WebControls.PowerWebPart, iLoveSharePoint.WebControls.PowerWebPart, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7f77686204a6dd39" />
+			<importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">Power WebPart 3.0</property>
+			  <property name="Description" type="string">iLove SharePoint PowerShell WebPart 3.0</property>
+        <property name="CatalogIconImageUrl" type="string" >/_layouts/images/iLoveSharePoint/PowerWebPartIcon3.gif</property>
+      </properties>
+		</data>
+	</webPart>
+</webParts>

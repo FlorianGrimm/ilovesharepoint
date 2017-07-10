@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Assemblies>
+    <Assembly Location="iLoveSharePoint.Fields.LookupFieldWithPicker.dll" DeploymentTarget="GlobalAssemblyCache" >
+<SafeControls>
+<SafeControl Assembly="iLoveSharePoint.Fields.LookupFieldWithPicker, Version=14.0.0.0, Culture=neutral, PublicKeyToken=3443098eba475529" Namespace="iLoveSharePoint.Fields" TypeName="*" Safe="True" />    
+</SafeControls>
+</Assembly>
+  </Assemblies>
+</Solution>

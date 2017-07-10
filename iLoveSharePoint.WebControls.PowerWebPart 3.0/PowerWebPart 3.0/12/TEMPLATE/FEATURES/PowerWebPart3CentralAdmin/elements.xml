@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomActionGroup 
+    Id="iLoveSharePoint.ApplicationManagement" 
+    Title="iLove SharePoint"
+    Location="Microsoft.SharePoint.Administration.ApplicationManagement"
+    Sequence="10"
+    />
+  <CustomAction
+    Id="iLoveSharePoint.WebControls.PowerWebPart.Configuration"
+    Location="Microsoft.SharePoint.Administration.ApplicationManagement"
+    GroupId="iLoveSharePoint.ApplicationManagement"
+    Title="PowerWebPart 3.0 Settings"
+    Sequence="10"
+    >
+    <UrlAction Url="/_layouts/iLoveSharePoint/PowerWebPartConfig3.aspx"/>
+  </CustomAction>
+</Elements>

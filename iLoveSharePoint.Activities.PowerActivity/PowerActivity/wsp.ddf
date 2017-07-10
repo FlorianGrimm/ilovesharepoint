@@ -1,0 +1,16 @@
+﻿.OPTION EXPLICIT     ; Generate errors 
+.Set CabinetNameTemplate=iLoveSharePoint.Activities.PowerActivity.wsp     
+.set DiskDirectoryTemplate=CDROM ; All cabinets go in a single directory
+.Set CompressionType=MSZIP;** All files are compressed in cabinet files
+.Set UniqueFiles="ON"
+.Set Cabinet=on
+.Set DiskDirectory1=Package
+
+manifest.xml
+iLoveSharePoint.Activities.PowerActivity.dll
+
+.Set DestinationDir="TEMPLATE\1031\Workflow\"
+iLoveSharePoint_PowerActivity_DE.ACTIONS
+
+.Set DestinationDir="TEMPLATE\1033\Workflow\"
+iLoveSharePoint_PowerActivity_EN.ACTIONS

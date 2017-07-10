@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLoveSharePoint.WebControls.PowerWebPart", "iLoveSharePoint.WebControls.PowerWebPart\iLoveSharePoint.WebControls.PowerWebPart.csproj", "{86E4A612-4123-4133-91EC-BAAC0C81969A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLoveSharePoint.Debug.Console", "iLoveSharePoint.Debug.Console\iLoveSharePoint.Debug.Console.csproj", "{C9C6EB45-B091-4FF3-8250-C9CDC4AF5B60}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs02
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = iLoveSharePoint.WebControls.PowerWebPart\\iLoveSharePoint.WebControls.PowerWebPart.csproj
+		SccProjectName1 = iLoveSharePoint.WebControls.PowerWebPart
+		SccLocalPath1 = iLoveSharePoint.WebControls.PowerWebPart
+		SccProjectUniqueName2 = iLoveSharePoint.Debug.Console\\iLoveSharePoint.Debug.Console.csproj
+		SccProjectName2 = iLoveSharePoint.Debug.Console
+		SccLocalPath2 = iLoveSharePoint.Debug.Console
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86E4A612-4123-4133-91EC-BAAC0C81969A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E4A612-4123-4133-91EC-BAAC0C81969A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E4A612-4123-4133-91EC-BAAC0C81969A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{86E4A612-4123-4133-91EC-BAAC0C81969A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E4A612-4123-4133-91EC-BAAC0C81969A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86E4A612-4123-4133-91EC-BAAC0C81969A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C9C6EB45-B091-4FF3-8250-C9CDC4AF5B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C6EB45-B091-4FF3-8250-C9CDC4AF5B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C6EB45-B091-4FF3-8250-C9CDC4AF5B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C6EB45-B091-4FF3-8250-C9CDC4AF5B60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

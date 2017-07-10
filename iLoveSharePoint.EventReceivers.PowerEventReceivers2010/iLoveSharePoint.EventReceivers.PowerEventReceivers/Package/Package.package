@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="604c57d3-7e29-4050-a0b9-1fd0aa3aa775" solutionId="f1409718-30bb-42d9-a4d0-a4c6c47cabfc" resetWebServer="false" name="iLoveSharePoint.PowerEventReceivers2010" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="eca0ad9c-657b-4269-baf4-8c90f866a562" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="3ba15345-03ad-4b51-91ef-b5822298c273" />
+    <projectItemReference itemId="144dd903-aa23-4cbd-92fe-b2e86c45dfe5" />
+  </projectItems>
+</package>

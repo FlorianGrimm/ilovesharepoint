@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:PowerActivity_Name"
+       ClassName="ILoveSharePoint.Workflow.Activities.PowerActivity"
+       Assembly="$SharePoint.Project.AssemblyFullName$"
+       AppliesTo="all"
+       UsesCurrentItem="false"
+       Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:PowerActivity_Sentence">
+        <FieldBind Field="Script" Text="$Resources:PowerActivity_Script" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="Signature" Text="$Resources:PowerActivity_Signature" Id="2" DesignerType="TextArea" />
+        <FieldBind Field="Param1" Text="$Resources:PowerActivity_Param1" Id="3" DesignerType="ParameterNames" />
+        <FieldBind Field="Param2" Text="$Resources:PowerActivity_Param2" Id="4" DesignerType="ParameterNames" />
+        <FieldBind Field="Param3" Text="$Resources:PowerActivity_Param3" Id="5" DesignerType="ParameterNames" />
+        <FieldBind Field="Param4" Text="$Resources:PowerActivity_Param4" Id="6" DesignerType="ParameterNames" />
+        <FieldBind Field="Param5" Text="$Resources:PowerActivity_Param5" Id="7" DesignerType="ParameterNames" />
+        <FieldBind Field="Secure" Text="$Resources:PowerActivity_Secure" Id="8" DesignerType="TextArea" />
+        <FieldBind Field="SecureStoreAppId" Text="$Resources:WebServiceActivity_AppId" Id="9" DesignerType="TextBox" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="Script" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Signature" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Param1" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Param2" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Param3" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Param4" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Param5" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Secure" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="SecureStoreAppId" Type="System.String, mscorlib" Direction="Optional" />
+       
+      </Parameters>
+    </Action>
+  </WorkflowActions>
+</Elements>

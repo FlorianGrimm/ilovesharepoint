@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:QueryXmlFileActivity_Name"
+      ClassName="ILoveSharePoint.Workflow.Activities.QueryXmlFileActivity"
+      Assembly="$SharePoint.Project.AssemblyFullName$"
+      AppliesTo="all"
+      UsesCurrentItem="false"
+      Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:QueryXmlFileActivity_Sentence">
+        <FieldBind Field="ListId,ListItem" Text="$Resources:QueryXmlFileActivity_ListItem" Id="1" DesignerType="ChooseDoclibItem" />
+        <FieldBind Field="XPath" Text="$Resources:QueryXmlFileActivity_XPath" Id="2" DesignerType="StringBuilder" />
+        <FieldBind Field="SelectionType" DesignerType="Dropdown" Id="3" Text="$Resources:QueryXmlFileActivity_SelectionType">
+          <Option Name="Inner XML" Value="InnerXml"/>
+          <Option Name="Outer XML" Value="OuterXml"/>
+          <Option Name="Value" Value="Value"/>
+        </FieldBind>
+        <FieldBind Field="Result,ResultType" Text="$Resources:QueryXmlFileActivity_Result" Id="4" DesignerType="ParameterNames" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="XPath" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="SelectionType" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Result"  Type="System.Object, mscorlib" Direction="Optional" />
+        <Parameter Name="ResultType" Type="System.String, mscorlib" Direction="Optional" />
+      </Parameters>
+    </Action>
+  </WorkflowActions>
+</Elements>

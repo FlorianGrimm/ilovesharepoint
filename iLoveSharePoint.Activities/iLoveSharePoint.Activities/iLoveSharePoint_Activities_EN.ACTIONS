@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowInfo Language="en-en">
+  <Actions Sequential="then" Parallel="and">
+    <Action Name="Call a Web Service"
+        ClassName="iLoveSharePoint.Activities.CallWebServiceActivity"
+        Assembly="iLoveSharePoint.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eba025cae8366a95"
+        AppliesTo="all"
+        UsesCurrentItem="true"
+        Category="iLove SharePoint">
+      <RuleDesigner Sentence="Address: %1; SOAP Version: %2; SOAP Action: %3; Envelope: %4; Response: %5; User: %6; Password: %7">
+        <FieldBind Field="Address" Text="URL" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="SoapVersion" DesignerType="Dropdown" Id="2" Text="SOAP Version">
+          <Option Name="SOAP 1.1" Value="SOAP11"/>
+          <Option Name="SOAP 1.2" Value="SOAP12"/>
+        </FieldBind>
+        <FieldBind Field="Action" Text="SOAPAction" Id="3" DesignerType="TextArea" />
+        <FieldBind Field="Envelope" Text="SOAP" Id="4" DesignerType="StringBuilder" />
+        <FieldBind Field="Response,ResponseType" Text="SOAP" Id="5" DesignerType="parameterNames" />
+        <FieldBind Field="User" Text="name" Id="6" DesignerType="TextArea" />
+        <FieldBind Field="Password" Text="password" Id="7" DesignerType="TextArea" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="SoapVersion" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Address" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Envelope" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Action" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="User" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Password" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="Response"  Type="System.Object, mscorlib" Direction="Optional" />
+        <Parameter Name="ResponseType" Type="System.String, mscorlib" Direction="Optional" />
+      </Parameters>
+    </Action>
+    <Action Name="Query XML"
+       ClassName="iLoveSharePoint.Activities.QueryXmlActivity"
+       Assembly="iLoveSharePoint.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eba025cae8366a95"
+       AppliesTo="all"
+       UsesCurrentItem="true"
+       Category="iLove SharePoint">
+      <RuleDesigner Sentence="XML Input: %1; XPath: %2; Result: %3">
+        <FieldBind Field="Xml" Text="Xml" Id="1" DesignerType="StringBuilder" />
+        <FieldBind Field="XPath" Text="XPath" Id="2" DesignerType="StringBuilder" />
+        <FieldBind Field="Result,ResultType" Text="Result" Id="3" DesignerType="parameterNames" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="Xml" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="XPath" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Result"  Type="System.Object, mscorlib" Direction="Optional" />
+        <Parameter Name="ResultType" Type="System.String, mscorlib" Direction="Optional" />
+      </Parameters>
+    </Action>
+    <Action Name="Create a site"
+      ClassName="iLoveSharePoint.Activities.CreateSiteActivity"
+      Assembly="iLoveSharePoint.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eba025cae8366a95"
+      AppliesTo="all"
+      UsesCurrentItem="true"
+      Category="iLove SharePoint">
+      <RuleDesigner Sentence="URL: %1; Title: %2; Description: %3; Template %4; Inherit Permissions: %5; Store new site URL in %6; Language: %7">
+        <FieldBind Field="Url" Text="URL" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="Title" Text="Title" Id="2" DesignerType="TextArea" />
+        <FieldBind Field="SiteDescription" Text="Description" Id="3" DesignerType="StringBuilder" />
+        <FieldBind Field="Template" Text="Template" Id="4" DesignerType="TextArea" />
+        <FieldBind Field="InheritPermissions" Text="InheritPermissions" Id="5" DesignerType="System.Boolean" />
+        <FieldBind Field="Result,ResultType" Text="Result" Id="6" DesignerType="parameterNames" />
+        <FieldBind Field="Language" Text="Code" Id="7" DesignerType="System.Int32" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="Url" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Title" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Description" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Template" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="InheritPermissions" Type="System.Boolean, mscorlib" Direction="In" />
+        <Parameter Name="Result"  Type="System.Object, mscorlib" Direction="Optional" />
+        <Parameter Name="ResultType" Type="System.String, mscorlib" Direction="Optional" />
+        <Parameter Name="Language" Type="System.Int32, mscorlib" Direction="Optional" />
+      </Parameters>
+    </Action>
+    <Action Name="Get parent folder"
+    ClassName="iLoveSharePoint.Activities.GetParentFolderActivity"
+    Assembly="iLoveSharePoint.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eba025cae8366a95"
+    AppliesTo="all"
+    UsesCurrentItem="true"
+    Category="iLove SharePoint">
+      <RuleDesigner Sentence="Get parent folder from %1 (Output to %2)">
+        <FieldBind Field="ListId,ListItem" Text="this list" Id="1" DesignerType="ChooseListItem" />
+        <FieldBind Field="Result,ResultType" Text="Result" Id="2" DesignerType="parameterNames" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="Result"  Type="System.Object, mscorlib" Direction="Optional" />
+        <Parameter Name="ResultType" Type="System.Int32, mscorlib" Direction="Optional" />
+      </Parameters>
+    </Action>
+    <Action Name="Execute SQL"
+       ClassName="iLoveSharePoint.Activities.ExecuteSqlActivity"
+       Assembly="iLoveSharePoint.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eba025cae8366a95"
+       AppliesTo="all"
+       UsesCurrentItem="true"
+       Category="iLove SharePoint">
+      <RuleDesigner Sentence="Provider: %1; Connection %2; SQL: %3 (Result: %4)">
+        <FieldBind Field="ProviderName" Text="Name" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="ConnectionString" Text="connection" Id="2" DesignerType="TextArea" />
+        <FieldBind Field="Sql" Text="text" Id="3" DesignerType="StringBuilder" />
+        <FieldBind Field="Result,ResultType" Text="Result" Id="4" DesignerType="parameterNames" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ProviderName" Type="System.String, mscorlib" Direction="In" InitialValue="System.Data.SqlClient"/>
+        <Parameter Name="ConnectionString" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Sql" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Result"  Type="System.Object, mscorlib" Direction="Optional" />
+        <Parameter Name="ResultType" Type="System.String, mscorlib" Direction="Optional" />
+      </Parameters>
+    </Action>
+    <Action Name="Assign role to an item"
+        ClassName="iLoveSharePoint.Activities.AssignRoleToItemActivity"
+        Assembly="iLoveSharePoint.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eba025cae8366a95"
+        AppliesTo="all"
+        UsesCurrentItem="true"
+        Category="iLove SharePoint">
+      <RuleDesigner Sentence="Assign %1 to %2 on %3">
+        <FieldBind Field="RoleName" Text="role" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="Principals" Text="users" Id="2" DesignerType="Person" />
+        <FieldBind Field="ListId,ListItem" Text="item" Id="3" DesignerType="ChooseListItem" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="Principals" Type="System.Collections.ArrayList, mscorlib" Direction="In" />
+        <Parameter Name="RoleName" Type="System.String, mscorlib" Direction="In" />
+      </Parameters>
+    </Action>
+    <Action Name="Set role inheritance of an item"
+     ClassName="iLoveSharePoint.Activities.SetItemRoleInheritanceActivity"
+     Assembly="iLoveSharePoint.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eba025cae8366a95"
+     AppliesTo="all"
+     UsesCurrentItem="true"
+     Category="iLove SharePoint">
+      <RuleDesigner Sentence="Enable role inheritance: %1 on %2">
+        <FieldBind Field="EnableInheritance" Text="EnableInheritance" Id="1" DesignerType="System.Boolean" />
+        <FieldBind Field="ListId,ListItem" Text="item" Id="2" DesignerType="ChooseListItem" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="EnableInheritance" Type="System.Boolean, mscorlib" Direction="In" InitialValue="false"/>
+      </Parameters>
+    </Action>
+    <Action Name="Clear role assignments of an item"
+       ClassName="iLoveSharePoint.Activities.ClearItemRoleAssignmentsActivity"
+       Assembly="iLoveSharePoint.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eba025cae8366a95"
+       AppliesTo="all"
+       UsesCurrentItem="true"
+       Category="iLove SharePoint">
+      <RuleDesigner Sentence="Clear role assignments of %1">
+        <FieldBind Field="ListId,ListItem" Text="item" Id="1" DesignerType="ChooseListItem" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="ListItem" Type="System.Int32, mscorlib" Direction="In" />
+      </Parameters>
+    </Action>
+    <Action Name="Start a workflow"
+       ClassName="iLoveSharePoint.Activities.StartWorkflowActivity"
+       Assembly="iLoveSharePoint.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eba025cae8366a95"
+       AppliesTo="all"
+       UsesCurrentItem="true"
+       Category="iLove SharePoint">
+      <RuleDesigner Sentence="Start workflow %1 on %2 (inital data: %3)">
+        <FieldBind Field="WorkflowName" Text="name" Id="1" DesignerType="TextArea" />
+        <FieldBind Field="ListId,ListItem" Text="item" Id="2" DesignerType="ChooseListItem" />
+        <FieldBind Field="EventData" Text="data" Id="3" DesignerType="StringBuilder" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="WorkflowName" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="EventData" Type="System.String, mscorlib" Direction="Optional" />
+      </Parameters>
+    </Action>
+  </Actions>
+</WorkflowInfo>

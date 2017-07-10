@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="$Resources:WorkflowExternalEvenList_Title"
+                OnQuickLaunch="FALSE"
+                TemplateType="10000"
+                Hidden="TRUE"
+                Url="Lists/WaitForExternalEventList"
+                Description="$Resources:WorkflowExternalEvenList_Description">
+  </ListInstance>
+</Elements>

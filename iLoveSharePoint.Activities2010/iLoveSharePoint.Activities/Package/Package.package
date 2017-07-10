@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="dba06714-bc56-4049-9264-7f04a4cf9853" solutionId="dba06714-bc56-4049-9264-7f04a4cf9853" resetWebServer="false" name="iLoveSharePoint.Workflow.Activities" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="33e09fac-cc9b-4d79-b703-3285e1423ba3" />
+    <featureReference itemId="03117205-42ed-487d-aa79-85ae784bd5f6" />
+    <featureReference itemId="eebe3786-4c08-4b9e-a2fe-298a988effca" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="5199e59e-f4b6-4089-80e8-e103eab9df34" />
+    <projectItemReference itemId="eed68e64-93ed-4960-8712-81c379b2693a" />
+    <projectItemReference itemId="f779ebfa-69d9-4d8f-a8f1-685a57e04a96" />
+  </projectItems>
+</package>

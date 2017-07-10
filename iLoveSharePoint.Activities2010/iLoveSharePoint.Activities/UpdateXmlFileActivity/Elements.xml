@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:UpdateXmlFileActivity_Name"
+      ClassName="ILoveSharePoint.Workflow.Activities.UpdateXmlFileActivity"
+      Assembly="$SharePoint.Project.AssemblyFullName$"
+      AppliesTo="all"
+      UsesCurrentItem="false"
+      Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:UpdateXmlFileActivity_Sentence">
+        <FieldBind Field="ListId,ListItem" Text="$Resources:UpdateXmlFileActivity_ListItem" Id="1" DesignerType="ChooseDoclibItem" />
+        <FieldBind Field="Xml" Text="$Resources:UpdateXmlFileActivity_Xml" Id="2" DesignerType="TextArea" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="__ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="__ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="ListId" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="ListItem" Type="System.Int32, mscorlib" Direction="In" />
+        <Parameter Name="Xml" Type="System.String, mscorlib" Direction="In" />
+      </Parameters>
+    </Action>
+  </WorkflowActions>
+</Elements>

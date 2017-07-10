@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<WorkflowActions>
+		<Action Name="Create a site"
+				SandboxedFunction="true"
+				Assembly="$SharePoint.Project.AssemblyFullName$"
+				ClassName="ILoveSharePoint.Sandbox.WorklowActions.CreateSiteAction"
+				FunctionName="CreateSite"
+				AppliesTo="all"
+				RequiredInvocationTags="ImpersonationSequence"
+				UsesCurrentItem="false"
+				Category="iLove SharePoint">
+			<RuleDesigner Sentence="Create site (Url: %1, Title: %2, Description: %3, Template: %4, Language: %5, Inherit Nav: %6, Top Nav: %7, Quick Nav: %8, Unique Permissions: %9, Output: %10, Error: %11).">
+				<FieldBind Field="url" Text="siteUrl" Id="1" DesignerType="TextBox" />
+				<FieldBind Field="title" Text="title" Id="2" DesignerType="TextBox" />
+				<FieldBind Field="description" Text="description" Id="3" DesignerType="TextBox" Value="" />
+				<FieldBind Field="template" Text="template" Id="4" DesignerType="TextBox" />
+				<FieldBind Field="language" Text="languageCode" Id="5" DesignerType="Integer" />
+				<FieldBind Field="inheritNav" Text="inheritNav" Id="6" DesignerType="Bool" />
+				<FieldBind Field="topNav" Text="topNav" Id="7" DesignerType="Bool" />
+				<FieldBind Field="quickNav" Text="quickNav" Id="8" DesignerType="Bool" />
+				<FieldBind Field="uniquePerm" Text="uniquePerm" Id="9" DesignerType="Bool" />
+				<FieldBind Field="output" Text="newSiteUrl" Id="10" DesignerType="ParameterNames" />
+				<FieldBind Field="error" Text="error" Id="11" DesignerType="ParameterNames" />
+			</RuleDesigner>
+			<Parameters>
+				<Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext, Microsoft.SharePoint.WorkflowActions" Direction="In" DesignerType="Hide" />
+				<Parameter Name="url" Type="System.String, mscorlib" Direction="In" DesignerType="TextBox"  />
+				<Parameter Name="title" Type="System.String, mscorlib" Direction="In" DesignerType="TextBox"  />
+				<Parameter Name="description" Type="System.String, mscorlib" Direction="Optional" DesignerType="TextBox" InitialValue="" />
+				<Parameter Name="template" Type="System.String, mscorlib" Direction="In" DesignerType="TextBox"  />
+				<Parameter Name="language" Type="System.Int32, mscorlib" Direction="In" DesignerType="Integer"  />
+				<Parameter Name="inheritNav" Type="System.Boolean, mscorlib" Direction="In" />
+				<Parameter Name="topNav" Type="System.Boolean, mscorlib" Direction="In" />
+				<Parameter Name="quickNav" Type="System.Boolean, mscorlib" Direction="In" />
+				<Parameter Name="uniquePerm" Type="System.Boolean, mscorlib" Direction="In" />				
+				<Parameter Name="output" Type="System.String, mscorlib" Direction="Out" DesignerType="ParameterNames"  />
+				<Parameter Name="error" Type="System.String, mscorlib" Direction="Out" DesignerType="ParameterNames"  />
+			</Parameters>
+		</Action>
+	</WorkflowActions>
+</Elements>

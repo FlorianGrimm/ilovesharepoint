@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <WorkflowActions>
+    <Action Name="$Resources:BuildStringActivity_Name"
+      ClassName="ILoveSharePoint.Workflow.Activities.BuildStringActivity"
+      Assembly="$SharePoint.Project.AssemblyFullName$"
+      AppliesTo="all"
+      UsesCurrentItem="false"
+      Category="iLove SharePoint 2010">
+      <RuleDesigner Sentence="$Resources:BuildStringActivity_Sentence">
+        <FieldBind Field="DynamicString" Text="$Resources:BuildStringActivity_DynamicString" Id="1" DesignerType="StringBuilder" />
+        <FieldBind Field="Result" Text="$Resources:BuildStringActivity_Result" Id="2" DesignerType="ParameterNames" />
+      </RuleDesigner>
+      <Parameters>
+        <Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Direction="In" />
+        <Parameter Name="DynamicString" Type="System.String, mscorlib" Direction="In" />
+        <Parameter Name="Result"  Type="System.String, mscorlib" Direction="Out" />
+      </Parameters>
+    </Action>
+  </WorkflowActions>
+</Elements>

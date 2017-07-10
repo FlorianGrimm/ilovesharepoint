@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomActionGroup
+   Id="iLoveSharePoint.WebControls.PowerWebPart.Administration"
+   Title="PowerWebPart 2010"
+   Location="Microsoft.SharePoint.Administration.Default"
+   Sequence="201"
+   ImageUrl="/_layouts/Images/iLoveSharePoint/PowerWebPartCA.jpg"
+    />
+  <CustomAction
+    Id="iLoveSharePoint.WebControls.PowerWebPart.Configuration"
+    Location="Microsoft.SharePoint.Administration.Default"
+    GroupId="iLoveSharePoint.WebControls.PowerWebPart.Administration"
+    Title="Configuration"
+    Sequence="10"
+    >
+    <UrlAction Url="/_layouts/iLoveSharePoint/PowerWebPartConfig3.aspx"/>
+  </CustomAction>
+</Elements>

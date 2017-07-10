@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Test iLoveSharePoint PowerGUI Launcher</title>
+</head>
+<body>
+    <h3>Script</h3>
+    <textarea id="script" rows="10" cols="60">$hello='Hello PowerGUI'</textarea><br />
+    <input type="button" onclick="startPowerGui()" value="Start PowerGUI"/>
+    <input type="button" onclick="checkIfPowerGuiIsInstalled()" value="Is PowerGUI installed?"/>
+</body>
+<script type="text/jscript">
+    var powerGuiLauncher = new ActiveXObject("iLoveSharePoint.PowerGuiLauncher");
+    var scriptBox;
+
+    var test = new ActiveXObject("iLoveSharePoint.PowerGuiOpenDocuments");
+    alert(test);
+
+    function startPowerGui() {   
+        powerGuiLauncher.StartPowerGui(scriptBox.innerText);
+    }
+    
+    function disposePowerGui()
+    {
+        if(powerGuiLauncher!=null)
+            powerGuiLauncher.Dispose();
+    }
+
+
+    function onScriptChanged(powerGuiLauncher, script) {
+        scriptBox.innerText = script;
+    }
+
+    function checkIfPowerGuiIsInstalled() {
+        alert(powerGuiLauncher.IsPowerGuiInstalled);
+    }
+
+    scriptBox = document.getElementById("script");
+    powerGuiLauncher.OnScriptChanged = onScriptChanged;
+    powerGuiLauncher.ScriptName = "Hello PowerGUI";
+    powerGuiLauncher.Initialize();
+
+    window.onunload = disposePowerGui;
+    
+</script>
+
+</html>

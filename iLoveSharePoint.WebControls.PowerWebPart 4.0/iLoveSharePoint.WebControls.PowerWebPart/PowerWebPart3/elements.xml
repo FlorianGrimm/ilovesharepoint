@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="PowerWebPart3" List="113" Url="_catalogs/wp">
+    <File Path="PowerWebPart3\PowerWebPart3.webpart" Url="PowerWebPart3.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="iLove SharePoint" />
+    </File>
+</Module>
+</Elements>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<WorkflowActions>
+		<Action Name="Add users to group"
+				SandboxedFunction="true"
+				Assembly="ILoveSharePoint.Sandbox.WorkflowActions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1cee825dae0994"
+				ClassName="ILoveSharePoint.Sandbox.WorkflowActions.AddUsersToGroupAction"
+				FunctionName="AddUsersToGroup"
+				AppliesTo="all"
+				RequiredInvocationTags="ImpersonationSequence"
+				UsesCurrentItem="false"
+				Category="iLove SharePoint">
+			<RuleDesigner Sentence="Add Users %1 to group %2 (Error: %3).">
+				<FieldBind Field="users" Text="users" Id="1" DesignerType="Person" />
+				<FieldBind Field="groupName" Text="groupName" Id="2" DesignerType="TextBox" Value="" />
+				<FieldBind Field="error" Text="error" Id="3" DesignerType="ParameterNames" />
+			</RuleDesigner>
+			<Parameters>
+				<Parameter Name="__Context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext, Microsoft.SharePoint.WorkflowActions" Direction="In" DesignerType="Hide" />
+				<Parameter Name="users" Type="System.Collections.ArrayList, mscorlib" Direction="In" DesignerType="Person"  />
+				<Parameter Name="groupName" Type="System.String, mscorlib" Direction="In" DesignerType="TextBox"  />
+				<Parameter Name="error" Type="System.String, mscorlib" Direction="Out" DesignerType="ParameterNames"  />
+			</Parameters>
+		</Action>
+
+	</WorkflowActions>
+</Elements>
